@@ -73,7 +73,7 @@ const translations = {
           icon: "brush",
           title: "Ne e krijojmë",
           text: "Dizajnojmë dhe ndërtojmë webfaqen.",
-          chips: ["Dizajn", "Tekst", "Mobile", "Shpejtësi"],
+          chips: ["Dizajn", "Tekst", "Telefon", "Shpejtësi"],
           visual: "design",
         },
         {
@@ -89,7 +89,7 @@ const translations = {
         { icon: "layout", title: "Webfaqe Prezantuese", text: "Për prezencë profesionale online." },
         { icon: "spark", title: "Webfaqe për Kompani", text: "Faqe të qarta për shërbimet tuaja." },
         { icon: "cart", title: "E-commerce", text: "Dyqan online për produkte dhe porosi." },
-        { icon: "gauge", title: "Dashboard", text: "Sisteme për menaxhim të biznesit." },
+        { icon: "gauge", title: "Panel biznesi", text: "Sisteme për menaxhim të biznesit." },
         { icon: "brush", title: "Ridizajnim", text: "Faqja e vjetër bëhet moderne." },
         { icon: "server", title: "Hosting & Mirëmbajtje", text: "Domain, hosting dhe përditësime." },
       ],
@@ -103,12 +103,12 @@ const translations = {
       view: "Shiko",
       modalCta: "Dua një ide si kjo",
       cards: [
-        { title: "Interior Vision", category: "Furniture Concept", text: "Koncept premium për mobilieri dhe interier.", tags: ["Concept", "Mobile Ready"], image: "assets/projects/art-home.png" },
-        { title: "Tech Product World", category: "Product Concept", text: "Faqe e pastër për produkte teknologjike.", tags: ["Concept", "Fast"], image: "assets/projects/artnet.png" },
-        { title: "School Future", category: "Education Vision", text: "Webfaqe e qartë për shkolla dhe njoftime.", tags: ["Concept", "Mobile Ready"], image: "assets/projects/school.png" },
-        { title: "Business Control Room", category: "Dashboard Concept", text: "Panel modern për porosi dhe klientë.", tags: ["Dashboard", "Custom"], image: "assets/projects/business-dashboard.png" },
-        { title: "Digital Storefront", category: "E-commerce Vision", text: "Dyqan online ku produktet duken premium.", tags: ["E-commerce", "Mobile"], image: "assets/projects/artnet-store.png" },
-        { title: "Cinematic Restaurant", category: "Restaurant Concept", text: "Koncept restorani me menu dhe rezervime.", tags: ["Concept", "Contact"], image: "assets/projects/restaurant.png" },
+        { title: "Interior Vision", category: "Koncept mobilieri", text: "Koncept premium për mobilieri dhe interier.", tags: ["Koncept", "Gati për telefon"], image: "assets/projects/art-home.png" },
+        { title: "Tech Product World", category: "Koncept produkti", text: "Faqe e pastër për produkte teknologjike.", tags: ["Koncept", "Shpejt"], image: "assets/projects/artnet.png" },
+        { title: "School Future", category: "Koncept edukimi", text: "Webfaqe e qartë për shkolla dhe njoftime.", tags: ["Koncept", "Gati për telefon"], image: "assets/projects/school.png" },
+        { title: "Business Control Room", category: "Panel biznesi", text: "Panel modern për porosi dhe klientë.", tags: ["Panel", "Personalizuar"], image: "assets/projects/business-dashboard.png" },
+        { title: "Digital Storefront", category: "Dyqan online", text: "Dyqan online ku produktet duken premium.", tags: ["Dyqan", "Telefon"], image: "assets/projects/artnet-store.png" },
+        { title: "Cinematic Restaurant", category: "Koncept restoranti", text: "Koncept restorani me menu dhe rezervime.", tags: ["Koncept", "Kontakt"], image: "assets/projects/restaurant.png" },
       ],
     },
     process: {
@@ -330,11 +330,21 @@ const translations = {
   },
 };
 
-const languageNames = { sq: "Albanian", en: "English", de: "German" };
+const languageNames = {
+  sq: { sq: "Shqip", en: "Anglisht", de: "Gjermanisht" },
+  en: { sq: "Albanian", en: "English", de: "German" },
+  de: { sq: "Albanisch", en: "Englisch", de: "Deutsch" },
+};
 const state = { lang: localStorage.getItem("artly-language") || "sq", activeProject: 0 };
 if (!translations[state.lang]) state.lang = "sq";
 const mobileViewport = window.matchMedia("(max-width: 700px)");
 let projectsExpanded = false;
+
+const conceptLabels = {
+  sq: { home: "Ballina", explore: "Shfleto", contact: "Kontakt", action: "Shiko" },
+  en: { home: "Home", explore: "Explore", contact: "Contact", action: "View" },
+  de: { home: "Start", explore: "Entdecken", contact: "Kontakt", action: "Ansehen" },
+};
 
 const getValue = (path) =>
   path.split(".").reduce((value, key) => (value && Object.hasOwn(value, key) ? value[key] : undefined), translations[state.lang]);
@@ -359,7 +369,7 @@ const mockWindow = (variant = "site", title = "Artly") => `
   <div class="mock-preview ${variant}">
     <div class="mock-preview-top"><span></span><span></span><span></span></div>
     <div class="mock-preview-body">
-      <nav class="preview-nav"><b>${title}</b><span>Work</span><span>Contact</span></nav>
+      <nav class="preview-nav"><b>${title}</b><span>${state.lang === "sq" ? "Punë" : state.lang === "de" ? "Arbeit" : "Work"}</span><span>${conceptLabels[state.lang]?.contact || "Kontakt"}</span></nav>
       <div class="preview-photo"></div>
       <strong>${title}</strong>
       <p>${variant.includes("dashboard") ? translations[state.lang].services.dashboardText : translations[state.lang].services.previewText}</p>
@@ -389,7 +399,9 @@ const renderFlowVisual = (visual, title) => {
   if (visual === "launch") {
     return `<div class="flow-launch-visual">${mockWindow("site interior", title)}<span class="launch-badge">LIVE</span><span class="growth-badge">${translations[state.lang].services.growthBadge}</span></div>`;
   }
-  return `<div class="flow-stack-visual">${mockWindow("site interior", title)}${mockWindow("dashboard mini", "Dashboard")}<div class="mini-phone-preview"><span></span><strong>Mobile</strong><i></i><i></i></div></div>`;
+  const dashboardTitle = state.lang === "sq" ? "Panel" : state.lang === "de" ? "Dashboard" : "Dashboard";
+  const mobileTitle = state.lang === "sq" ? "Telefon" : state.lang === "de" ? "Mobil" : "Mobile";
+  return `<div class="flow-stack-visual">${mockWindow("site interior", title)}${mockWindow("dashboard mini", dashboardTitle)}<div class="mini-phone-preview"><span></span><strong>${mobileTitle}</strong><i></i><i></i></div></div>`;
 };
 
 const renderTrustBadges = () => {
@@ -488,17 +500,18 @@ const renderConceptWebsite = (project, index, mode = "desktop") => {
   const asset = conceptAssets[index % conceptAssets.length];
   const title = project.title;
   const photoWidth = mode === "phone" ? 320 : 520;
+  const labels = conceptLabels[state.lang] || conceptLabels.sq;
   const photoStyle = `--concept-photo: url('${mobileSizedImage(asset.photo, photoWidth)}'); --concept-photo-2: url('${mobileSizedImage(asset.secondary, 360)}'); --concept-photo-3: url('${mobileSizedImage(asset.tertiary, 360)}'); --concept-photo-4: url('${mobileSizedImage(asset.detail, 360)}')`;
   return `
     <div class="concept-site site-${asset.theme} ${mode === "phone" ? "site-phone" : ""}" style="${photoStyle}">
-      <nav><b>${title}</b><span>Home</span><span>Explore</span><span>Contact</span></nav>
+      <nav><b>${title}</b><span>${labels.home}</span><span>${labels.explore}</span><span>${labels.contact}</span></nav>
       <div class="concept-site-body">
         <section class="site-hero">
           <div>
             <small>${project.category}</small>
             <h4>${title}</h4>
             <p>${project.text}</p>
-            <em>Start concept</em>
+            <em>${labels.action}</em>
           </div>
           <i class="site-photo"></i>
         </section>
@@ -632,7 +645,10 @@ const bindProjectCards = () => {
     projectsExpanded = !projectsExpanded;
     renderProjects();
     bindProjectCards();
-    observeReveal();
+    document.querySelectorAll("#projects .project-card.reveal").forEach((card, index) => {
+      card.style.transitionDelay = `${Math.min(index, 5) * 70}ms`;
+      requestAnimationFrame(() => card.classList.add("is-visible"));
+    });
     const nextTop = projectsSection?.getBoundingClientRect().top || 0;
     window.scrollBy({ top: nextTop - previousTop, behavior: "smooth" });
   });
@@ -656,7 +672,7 @@ const renderAll = () => {
     button.setAttribute("aria-pressed", String(isActive));
   });
   document.querySelectorAll("[data-footer-lang]").forEach((button) => {
-    button.textContent = languageNames[button.dataset.footerLang];
+    button.textContent = languageNames[state.lang]?.[button.dataset.footerLang] || button.dataset.footerLang;
   });
 
   renderTrustBadges();
@@ -732,7 +748,8 @@ function observeReveal() {
   );
   document.querySelectorAll(".reveal").forEach((element, index) => {
     const flowIndex = element.dataset.flowIndex;
-    const delay = flowIndex !== undefined ? Number(flowIndex) * 320 : Math.min(index % 8, 7) * 55;
+    const projectDelay = mobileViewport.matches && element.closest("#projects") ? 980 : 0;
+    const delay = (flowIndex !== undefined ? Number(flowIndex) * 320 : Math.min(index % 8, 7) * 55) + projectDelay;
     element.style.transitionDelay = `${delay}ms`;
     if (flowIndex !== undefined) {
       flowRevealObserver.observe(element);

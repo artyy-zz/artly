@@ -5153,6 +5153,78 @@ body::after {
   }
 }
 
+@media (max-width: 700px) {
+  .modal-card {
+    scroll-padding-top: 62px;
+  }
+
+  .modal-close {
+    position: sticky;
+    top: 10px;
+    grid-column: 1 / -1;
+    justify-self: end;
+    margin: 10px 10px -48px 0;
+    z-index: 8;
+    width: 42px;
+    height: 42px;
+    background: rgba(8, 12, 21, 0.82);
+    backdrop-filter: blur(10px);
+  }
+
+  .modal-visual {
+    padding-top: 58px;
+  }
+
+  .modal-visual .concept-scene {
+    min-height: clamp(250px, 72vw, 330px);
+  }
+
+  .modal-visual .concept-desktop {
+    left: 12px;
+    right: 58px;
+    top: 34px;
+  }
+
+  .modal-visual .concept-phone {
+    display: block;
+    right: 12px;
+    bottom: 22px;
+    width: clamp(58px, 17vw, 72px);
+    height: clamp(118px, 35vw, 148px);
+    border-width: 4px;
+    border-radius: 18px;
+    transform: none !important;
+  }
+
+  .modal-visual .concept-site,
+  .modal-visual .site-hero {
+    min-height: 190px;
+  }
+
+  .modal-visual .site-photo {
+    min-height: 128px;
+  }
+
+  .concept-browser-bar {
+    gap: 5px;
+    padding: 0 10px;
+  }
+
+  .concept-browser-bar i {
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.34);
+    box-shadow: none;
+  }
+
+  .concept-browser-bar span {
+    max-width: 48%;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.56rem;
+    letter-spacing: 0;
+  }
+}
+
 /* Mobile-first polish pass */
 @media (max-width: 700px) {
   html {
@@ -5788,11 +5860,6 @@ body::after {
       background 200ms ease;
   }
 
-  .project-card.reveal {
-    opacity: 1;
-    transform: none;
-   }
-
   .project-grid:not(.is-expanded) .project-card:nth-of-type(n + 4) {
     max-height: 0;
     border-width: 0;
@@ -5858,5 +5925,54 @@ body::after {
   .project-open-button,
   .projects-toggle {
     display: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .modal-visual .concept-phone {
+    display: block;
+    right: 12px;
+    bottom: 20px;
+    width: clamp(58px, 17vw, 74px);
+    height: clamp(118px, 35vw, 150px);
+  }
+
+  .modal-visual .site-modules {
+    display: grid;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .modal-visual .site-modules i {
+    min-height: 22px;
+    border-radius: 8px;
+  }
+
+  .modal-visual .site-hero p,
+  .modal-visual .site-hero em {
+    display: revert;
+  }
+
+  .modal-visual .site-hero p {
+    font-size: 0.5rem;
+  }
+
+  .modal-visual .site-hero em {
+    font-size: 0.46rem;
+    margin-top: 7px;
+  }
+
+  .modal-close {
+    position: sticky;
+    top: 10px;
+    align-self: start;
+  }
+
+  .project-open-button,
+  .projects-toggle {
+    border-color: rgba(119, 168, 255, 0.38);
+    background:
+      linear-gradient(135deg, rgba(119, 168, 255, 0.15), rgba(255, 255, 255, 0.045)),
+      rgba(255, 255, 255, 0.04);
   }
 }
