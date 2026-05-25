@@ -42,7 +42,9 @@ const translations = {
     hero: {
       eyebrow: "Artly Digital Studio",
       title: "Klientët të besojnë më shumë kur biznesi yt duket profesional online.",
+      mobileTitle: "Webfaqe moderne për biznesin tuaj.",
       text: "Një webfaqe moderne e bën biznesin më të lehtë për t’u gjetur, më të lehtë për t’u kontaktuar dhe më serioz në sytë e klientëve.",
+      mobileText: "Dukuni profesional online dhe bëjeni kontaktin më të lehtë për klientët.",
       badges: ["Më shumë besim", "Kontakt i lehtë", "Pa stres teknik"],
       float: { stepOne: "Na tregoni idenë", stepTwo: "Ne e krijojmë", stepThree: "Webfaqja lansohet" },
       metricSteps: "hapa të thjeshtë",
@@ -153,7 +155,9 @@ const translations = {
     hero: {
       eyebrow: "Artly Digital Studio",
       title: "Modern websites for your business.",
+      mobileTitle: "Modern websites for business.",
       text: "Look professional online, help customers find you faster, and make contact simple.",
+      mobileText: "Look professional online and make contact simple for customers.",
       badges: ["More trust", "Easy contact", "No tech stress"],
       float: { stepOne: "Share the idea", stepTwo: "We create it", stepThree: "Website starts" },
       metricSteps: "simple steps",
@@ -237,7 +241,9 @@ const translations = {
     hero: {
       eyebrow: "Artly Digital Studio",
       title: "Moderne Websites für Ihr Unternehmen.",
+      mobileTitle: "Moderne Websites für Ihr Business.",
       text: "Professionell online wirken, leichter gefunden werden und Kontakt einfacher machen.",
+      mobileText: "Professionell online wirken und Kontakt für Kunden einfach machen.",
       badges: ["Mehr Vertrauen", "Einfacher Kontakt", "Kein Technikstress"],
       float: { stepOne: "Idee erzählen", stepTwo: "Wir erstellen es", stepThree: "Website startet" },
       metricSteps: "einfache Schritte",
@@ -318,9 +324,19 @@ const translations = {
 const languageNames = { sq: "Albanian", en: "English", de: "German" };
 const state = { lang: localStorage.getItem("artly-language") || "sq", activeProject: 0 };
 if (!translations[state.lang]) state.lang = "sq";
+const mobileViewport = window.matchMedia("(max-width: 700px)");
 
 const getValue = (path) =>
   path.split(".").reduce((value, key) => (value && Object.hasOwn(value, key) ? value[key] : undefined), translations[state.lang]);
+
+const getResponsiveValue = (path) => {
+  if (mobileViewport.matches && path === "hero.title") return translations[state.lang].hero.mobileTitle;
+  if (mobileViewport.matches && path === "hero.text") return translations[state.lang].hero.mobileText;
+  return getValue(path);
+};
+
+const mobileSizedImage = (url, width = 480) =>
+  mobileViewport.matches ? url.replace(/w=\d+/g, `w=${width}`).replace(/q=\d+/g, "q=62") : url;
 
 const createElement = (tag, className, text) => {
   const element = document.createElement(tag);
@@ -461,7 +477,8 @@ const conceptAssets = [
 const renderConceptWebsite = (project, index, mode = "desktop") => {
   const asset = conceptAssets[index % conceptAssets.length];
   const title = project.title;
-  const photoStyle = `--concept-photo: url('${asset.photo}'); --concept-photo-2: url('${asset.secondary}'); --concept-photo-3: url('${asset.tertiary}'); --concept-photo-4: url('${asset.detail}')`;
+  const photoWidth = mode === "phone" ? 320 : 520;
+  const photoStyle = `--concept-photo: url('${mobileSizedImage(asset.photo, photoWidth)}'); --concept-photo-2: url('${mobileSizedImage(asset.secondary, 360)}'); --concept-photo-3: url('${mobileSizedImage(asset.tertiary, 360)}'); --concept-photo-4: url('${mobileSizedImage(asset.detail, 360)}')`;
   return `
     <div class="concept-site site-${asset.theme} ${mode === "phone" ? "site-phone" : ""}" style="${photoStyle}">
       <nav><b>${title}</b><span>Home</span><span>Explore</span><span>Contact</span></nav>
@@ -599,7 +616,7 @@ const renderAll = () => {
   document.querySelector("meta[property='og:description']")?.setAttribute("content", translations[state.lang].meta.description);
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const value = getValue(element.dataset.i18n);
+    const value = getResponsiveValue(element.dataset.i18n);
     if (typeof value === "string") element.textContent = value;
   });
 
@@ -889,6 +906,7 @@ const setupContact = () => {
 
 document.querySelectorAll("[data-lang]").forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
 document.querySelectorAll("[data-footer-lang]").forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.footerLang)));
+mobileViewport.addEventListener?.("change", renderAll);
 document.querySelectorAll("[data-modal-close]").forEach((button) => button.addEventListener("click", closeProjectModal));
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeProjectModal();

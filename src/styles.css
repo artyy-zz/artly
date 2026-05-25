@@ -5152,3 +5152,395 @@ body::after {
     font-size: 1.66rem;
   }
 }
+
+/* Mobile-first polish pass */
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  body {
+    overflow-x: clip;
+  }
+
+  .nav-wrap {
+    height: 66px;
+  }
+
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+    position: relative;
+  }
+
+  .menu-toggle span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    transform: translate(-50%, -5px);
+  }
+
+  .menu-toggle span:last-child {
+    transform: translate(-50%, 5px);
+  }
+
+  .nav-open .menu-toggle span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .nav-open .menu-toggle span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .nav-links {
+    inset: 72px 12px auto;
+    gap: 8px;
+    border-color: rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035)),
+      rgba(5, 7, 13, 0.995);
+    box-shadow: 0 22px 80px rgba(0, 0, 0, 0.56);
+    padding: 10px;
+    transform: translateY(-10px) scale(0.98);
+    transform-origin: top center;
+  }
+
+  .nav-open .nav-links {
+    transform: translateY(0) scale(1);
+  }
+
+  .nav-links a {
+    min-height: 54px;
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .nav-links a.is-active,
+  .nav-links a:hover {
+    background: rgba(119, 168, 255, 0.14);
+  }
+
+  .language-switcher {
+    height: 38px;
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 34px 0 46px;
+  }
+
+  .hero-grid {
+    gap: 0;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: clamp(2.05rem, 9.2vw, 2.42rem);
+    line-height: 1.06;
+  }
+
+  h2 {
+    font-size: clamp(1.72rem, 7.2vw, 2.05rem);
+  }
+
+  .hero-text {
+    max-width: 34rem;
+    margin-top: 16px;
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr;
+    margin-top: 22px;
+  }
+
+  .hero-actions .btn,
+  .form-submit {
+    width: 100%;
+  }
+
+  .trust-row {
+    display: none;
+  }
+
+  .trust-badge {
+    min-height: 44px;
+    border-radius: 12px;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .split-heading,
+  .section-heading {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .service-flow-section h2,
+  .service-flow-section .split-heading h2,
+  #projects h2,
+  .contact-section h2 {
+    font-size: clamp(1.72rem, 7.2vw, 2.05rem);
+    line-height: 1.1;
+  }
+
+  .section-lead {
+    font-size: 0.96rem;
+  }
+
+  .service-flow {
+    gap: 12px;
+  }
+
+  .flow-step {
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .flow-step::after {
+    inset: auto 18px 14px;
+    height: 3px;
+  }
+
+  .flow-copy {
+    padding: 0 0 10px;
+  }
+
+  .flow-copy h3 {
+    font-size: 1.22rem;
+  }
+
+  .flow-chip-row {
+    gap: 7px;
+  }
+
+  .flow-chip-row span,
+  .tag {
+    border-radius: 10px;
+  }
+
+  .flow-visual {
+    display: none;
+  }
+
+  .project-grid {
+    gap: 14px;
+  }
+
+  .project-card {
+    min-height: 0;
+    border-radius: 12px;
+  }
+
+  .project-visual,
+  .project-card .concept-scene {
+    min-height: clamp(152px, 44vw, 186px);
+  }
+
+  .project-card .concept-orbit,
+  .project-card .concept-phone {
+    display: none;
+  }
+
+  .project-card .concept-desktop {
+    left: 12px;
+    right: 12px;
+    top: 18px;
+  }
+
+  .concept-browser-bar {
+    height: 28px;
+  }
+
+  .concept-site {
+    min-height: 132px;
+  }
+
+  .concept-site nav {
+    height: 32px;
+    padding: 0 14px;
+  }
+
+  .concept-site-body {
+    padding: 14px;
+  }
+
+  .site-hero {
+    min-height: 92px;
+    gap: 10px;
+  }
+
+  .site-hero h4 {
+    font-size: 1rem;
+  }
+
+  .site-hero p,
+  .site-hero em {
+    display: none;
+  }
+
+  .site-photo {
+    min-height: 82px;
+    border-radius: 12px;
+  }
+
+  .site-modules {
+    display: none;
+  }
+
+  .project-body {
+    gap: 5px;
+    padding: 16px 16px 8px;
+  }
+
+  .project-body strong {
+    font-size: 1.05rem;
+  }
+
+  .project-body span {
+    font-size: 0.91rem;
+    line-height: 1.45;
+  }
+
+  .project-card .tag-row {
+    gap: 7px;
+    padding: 0 16px 16px;
+  }
+
+  .contact-section {
+    padding-top: 52px;
+    padding-bottom: 88px;
+  }
+
+  .contact-logo {
+    width: 78px;
+    height: 78px;
+  }
+
+  .contact-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-layout {
+    gap: 14px;
+  }
+
+  .contact-panel,
+  .quote-form {
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .contact-panel h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-panel p {
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+
+  .contact-methods {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .contact-method {
+    grid-template-columns: 48px minmax(0, 1fr);
+    min-height: 76px;
+    border-color: rgba(119, 168, 255, 0.2);
+    border-radius: 13px;
+    background:
+      linear-gradient(135deg, rgba(119, 168, 255, 0.105), rgba(255, 255, 255, 0.035)),
+      rgba(255, 255, 255, 0.04);
+    padding: 12px;
+  }
+
+  .contact-method span {
+    width: 48px;
+    height: 48px;
+    background: rgba(119, 168, 255, 0.13);
+    font-size: 1.05rem;
+  }
+
+  .contact-method strong {
+    font-size: 1rem;
+  }
+
+  .contact-method small {
+    font-size: 0.88rem;
+  }
+
+  .quote-form {
+    gap: 14px;
+  }
+
+  .form-row {
+    gap: 7px;
+  }
+
+  input,
+  select,
+  textarea {
+    min-height: 54px;
+    border-radius: 12px;
+    padding: 14px;
+  }
+
+  textarea {
+    min-height: 126px;
+  }
+
+  .mobile-sticky-contact {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    width: min(100% - 22px, var(--container));
+  }
+
+  .hero {
+    padding-top: 30px;
+  }
+
+  h1 {
+    font-size: clamp(1.98rem, 9.1vw, 2.22rem);
+  }
+
+  .hero-text {
+    font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .container {
+    width: min(100% - 20px, var(--container));
+  }
+
+  h1 {
+    font-size: 1.92rem;
+  }
+
+  .lang-button {
+    min-width: 28px;
+  }
+}
