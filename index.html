@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artly | Webfaqe Moderne për Biznese</title>
+    <meta
+      name="description"
+      content="Artly krijon webfaqe moderne, të shpejta dhe të përshtatura për biznese të çdo madhësie, pa komplikime teknike."
+    />
+    <meta
+      name="keywords"
+      content="Artly, web design, web development, webfaqe, biznes, e-commerce, dashboard, Albania, Kosovo"
+    />
+    <meta name="theme-color" content="#05070d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Artly | Webfaqe Moderne për Biznese" />
+    <meta
+      property="og:description"
+      content="Webfaqe moderne, të shpejta dhe të përshtatura për çdo biznes."
+    />
+    <meta property="og:image" content="assets/artly-white.png" />
+    <link rel="icon" href="assets/artly-white.png" />
+    <link rel="apple-touch-icon" href="assets/artly-white.png" />
+    <link rel="preload" href="assets/artly-white.png" as="image" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script type="module" src="src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="accessibility.skip">Kalo te përmbajtja</a>
+
+    <header class="site-header" data-header>
+      <div class="nav-wrap">
+        <a class="brand" href="#home" aria-label="Artly">
+          <img src="assets/artly-white.png" alt="" class="brand-mark" />
+          <span class="brand-name">Artly</span>
+        </a>
+
+        <nav class="nav-links" id="main-nav" aria-label="Navigimi kryesor">
+          <a href="#home" data-section-link="home" data-i18n="nav.home">Home</a>
+          <a href="#services" data-section-link="services" data-i18n="nav.services">Procesi</a>
+          <a href="#projects" data-section-link="projects" data-i18n="nav.projects">Ide</a>
+          <a href="#contact" data-section-link="contact" data-i18n="nav.contact">Kontakti</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="language-switcher" role="group" aria-label="Language">
+            <button class="lang-button is-active" type="button" data-lang="sq" aria-pressed="true">AL</button>
+            <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+            <button class="lang-button" type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <a class="btn btn-small btn-primary nav-cta" href="#contact" data-i18n="cta.quote">Merr Ofertë</a>
+          <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section" id="home" aria-labelledby="hero-title">
+        <div class="section-bg-lines" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow reveal" data-i18n="hero.eyebrow">Artly Digital Studio</p>
+            <h1 class="reveal" id="hero-title" data-i18n="hero.title">
+              Klientët të besojnë më shumë kur biznesi yt duket profesional online.
+            </h1>
+            <p class="hero-text reveal" data-i18n="hero.text">
+              Një webfaqe moderne e bën biznesin më të lehtë për t’u gjetur, më të lehtë për t’u kontaktuar dhe më serioz në sytë e klientëve.
+            </p>
+            <div class="hero-actions reveal">
+              <a class="btn btn-primary" href="#contact" data-i18n="cta.quote">Merr Ofertë</a>
+              <a class="btn btn-ghost" href="#projects" data-i18n="cta.projects">Shiko Idetë</a>
+            </div>
+            <div class="trust-row reveal" data-render="trustBadges" aria-label="Përfitimet kryesore"></div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Artly website mockup">
+            <div class="mockup-stage spatial-scene" data-parallax>
+              <div class="artly-orbit orbit-one" aria-hidden="true"></div>
+              <div class="artly-orbit orbit-two" aria-hidden="true"></div>
+              <div class="depth-light" aria-hidden="true"></div>
+
+              <div class="floating-chip chip-one depth-layer" data-depth="2">
+                <span class="chip-dot"></span>
+                <span data-i18n="hero.float.stepOne">Na tregoni idenë</span>
+              </div>
+              <div class="floating-chip chip-two depth-layer" data-depth="4">
+                <span class="chip-dot"></span>
+                <span data-i18n="hero.float.stepTwo">Ne e krijojmë</span>
+              </div>
+              <div class="floating-chip chip-three depth-layer" data-depth="3">
+                <span class="chip-dot"></span>
+                <span data-i18n="hero.float.stepThree">Webfaqja lansohet</span>
+              </div>
+
+              <div class="laptop-mockup hero-device depth-layer" data-depth="8">
+                <div class="laptop-lid">
+                  <div class="browser-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="browser-url">arthome-ks.com/sq</div>
+                  </div>
+                  <div class="concept-site site-interior hero-concept-site" style="--concept-photo: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=76'); --concept-photo-2: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=520&q=74'); --concept-photo-3: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=520&q=74'); --concept-photo-4: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=520&q=74')">
+                    <nav><b>Interior Vision</b><span>Studio</span><span>Rooms</span><span>Contact</span></nav>
+                    <div class="concept-site-body">
+                      <section class="site-hero">
+                        <div>
+                          <small>Furniture Concept</small>
+                          <h4>Warm interiors, premium online.</h4>
+                          <p>Një website elegant për mobilieri dhe interier modern.</p>
+                          <em>Explore concept</em>
+                        </div>
+                        <i class="site-photo"></i>
+                      </section>
+                      <div class="site-modules"><i></i><i></i><i></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="laptop-base"></div>
+              </div>
+
+              <div class="hero-phone depth-layer" data-depth="11" aria-hidden="true">
+                <div class="phone-frame">
+                  <div class="concept-site site-restaurant site-phone hero-phone-concept" style="--concept-photo: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=520&q=74'); --concept-photo-2: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=520&q=74'); --concept-photo-3: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=520&q=74'); --concept-photo-4: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=520&q=74')">
+                    <nav><b>Cinematic Restaurant</b><span>Menu</span></nav>
+                    <div class="concept-site-body">
+                      <section class="site-hero">
+                        <div>
+                          <small>Restaurant</small>
+                          <h4>Menu & reservations</h4>
+                          <em>Book table</em>
+                        </div>
+                        <i class="site-photo"></i>
+                      </section>
+                      <div class="site-modules"><i></i><i></i></div>
+                    </div>
+                  </div>
+                  <div class="phone-glass"></div>
+                </div>
+              </div>
+
+              <div class="floating-project-card project-float-one depth-layer" data-depth="5">
+                <div class="concept-site site-tech hero-mini-concept" style="--concept-photo: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=520&q=74'); --concept-photo-2: url('https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=520&q=74')">
+                  <nav><b>Tech Product</b><span>Shop</span></nav>
+                  <div class="concept-site-body">
+                    <section class="site-hero">
+                      <div><small>Product Concept</small><h4>Clean tech catalog.</h4></div>
+                      <i class="site-photo"></i>
+                    </section>
+                    <div class="site-modules"><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+                <span>Tech Product World</span>
+              </div>
+              <div class="floating-project-card project-float-two depth-layer" data-depth="7">
+                <div class="concept-site site-dashboard hero-mini-concept" style="--concept-photo: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=520&q=74'); --concept-photo-2: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=520&q=74')">
+                  <nav><b>Control Room</b><span>Live</span></nav>
+                  <div class="concept-site-body">
+                    <section class="site-hero">
+                      <div><small>Dashboard</small><h4>Orders, clients, stats.</h4></div>
+                      <i class="site-photo"></i>
+                    </section>
+                    <div class="site-modules"><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+                <span>Business Control Room</span>
+              </div>
+              <div class="scene-shadow" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section service-flow-section" id="services" aria-labelledby="services-title">
+        <div class="container split-heading">
+          <div>
+            <p class="eyebrow reveal" data-i18n="services.eyebrow">Shërbimet</p>
+            <h2 class="reveal" id="services-title" data-i18n="services.title">Nga ideja te webfaqja live.</h2>
+          </div>
+          <p class="section-lead reveal" data-i18n="services.subtitle">
+            Një proces i thjeshtë, i treguar me pamje.
+          </p>
+        </div>
+        <div class="container service-flow" data-render="serviceFlow"></div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container split-heading">
+          <div>
+            <p class="eyebrow reveal" data-i18n="projects.eyebrow">Ide</p>
+            <h2 class="reveal" id="projects-title" data-i18n="projects.title">Ide për biznesin tuaj</h2>
+          </div>
+          <p class="section-lead reveal" data-i18n="projects.subtitle">
+            Pamje të ndryshme që mund t’i krijojmë. Zgjidhni stilin që i përshtatet biznesit tuaj.
+          </p>
+        </div>
+        <div class="container project-grid" data-render="projectCards"></div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container section-heading">
+          <div class="contact-logo reveal">
+            <img src="assets/artly-white.png" alt="" />
+          </div>
+          <p class="eyebrow reveal" data-i18n="contact.eyebrow">Kontakt</p>
+          <h2 class="reveal" id="contact-title" data-i18n="contact.title">
+            Gati për webfaqen tuaj?
+          </h2>
+        </div>
+        <div class="container contact-layout">
+          <div class="contact-panel reveal">
+            <h3 data-i18n="contact.optionsTitle">Kontakt direkt</h3>
+            <p data-i18n="contact.optionsText">
+              Zgjidhni mënyrën më të lehtë për ju. Ne ju përgjigjemi me hapa të qartë dhe pa komplikime.
+            </p>
+            <div class="contact-methods">
+              <a class="contact-method" data-contact="viber" href="#">
+                <span>V</span>
+                <strong data-i18n="contact.viber">Shkruaj në Viber</strong>
+                <small data-contact-detail="viber">+383 49 452 409</small>
+              </a>
+              <a class="contact-method" data-contact="email" href="#">
+                <span>@</span>
+                <strong data-i18n="contact.email">Dërgo Email</strong>
+                <small data-contact-detail="email">artiibela0@gmail.com</small>
+              </a>
+              <a class="contact-method" data-contact="phone" href="#">
+                <span>+</span>
+                <strong data-i18n="contact.phone">Telefono</strong>
+                <small data-contact-detail="phone">+383 49 452 409</small>
+              </a>
+            </div>
+          </div>
+
+          <form class="quote-form reveal" data-contact-form>
+            <div class="form-row">
+              <label for="name" data-i18n="form.name">Emri</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-row">
+              <label for="business" data-i18n="form.business">Biznesi</label>
+              <input id="business" name="business" type="text" autocomplete="organization" />
+            </div>
+            <div class="form-row">
+              <label for="contactField" data-i18n="form.contact">Email / Telefoni</label>
+              <input id="contactField" name="contact" type="text" autocomplete="email" required />
+            </div>
+            <div class="form-row">
+              <label for="need" data-i18n="form.need">Çfarë ju duhet?</label>
+              <textarea id="need" name="need" rows="4" required></textarea>
+            </div>
+            <div class="form-row form-row-full">
+              <label for="message" data-i18n="form.message">Mesazhi</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button class="btn btn-primary form-submit" type="submit">
+              <span data-submit-label data-i18n="form.submit">Dërgo Kërkesën</span>
+              <span class="submit-loader" aria-hidden="true"></span>
+            </button>
+            <p class="form-status" role="status" data-form-status></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <a class="mobile-sticky-contact" href="#contact" data-i18n="cta.mobileContact">Kontakt</a>
+
+    <div class="project-modal" data-project-modal aria-hidden="true">
+      <button class="modal-backdrop" type="button" data-modal-close aria-label="Close"></button>
+      <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-modal-close aria-label="Close">×</button>
+        <div class="modal-visual" data-modal-visual></div>
+        <div class="modal-content">
+          <p class="eyebrow" data-modal-category></p>
+          <h2 id="modal-title" data-modal-title></h2>
+          <p data-modal-text></p>
+          <div class="modal-badges" data-modal-badges></div>
+          <a class="btn btn-primary" href="#contact" data-modal-contact data-i18n="cta.quote">Merr Ofertë</a>
+        </div>
+      </article>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#home" aria-label="Artly">
+            <img src="assets/artly-white.png" alt="" class="brand-mark" />
+            <span class="brand-name">Artly</span>
+          </a>
+          <p data-i18n="footer.text">
+            Webfaqe moderne, të shpejta dhe të përshtatura për biznese që duan të duken serioze online.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3 data-i18n="footer.navigation">Navigimi</h3>
+          <a href="#services" data-i18n="nav.services">Shërbimet</a>
+          <a href="#projects" data-i18n="nav.projects">Projektet</a>
+          <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+        </div>
+        <div class="footer-column">
+          <h3 data-i18n="footer.languages">Gjuhët</h3>
+          <button type="button" data-footer-lang="sq">Albanian</button>
+          <button type="button" data-footer-lang="en">English</button>
+          <button type="button" data-footer-lang="de">German</button>
+        </div>
+        <div class="footer-column">
+          <h3 data-i18n="footer.social">Social</h3>
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Artly.</span>
+        <span data-i18n="footer.rights">Të gjitha të drejtat e rezervuara.</span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+{
+  "assets": [
+    {
+      "contentType": "image/avif",
+      "id": "c06a29f442dc7816",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\c06a29f442dc7816",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fartnet%2Flogo-new.png&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "f76243bd58c1dbf2",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\f76243bd58c1dbf2",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fartnet%2Flogo-new.png&w=640&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "47fa37b19ed1fb35",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\47fa37b19ed1fb35",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fartnet%2Flogo-new.png&w=256&q=75"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "b6239cdc1283e584",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\b6239cdc1283e584",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-46304%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "939961ae026a43cc",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\939961ae026a43cc",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55336%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "b5bcb5b48a436140",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\b5bcb5b48a436140",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55337%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "0cda4065da83319b",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\0cda4065da83319b",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55338%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "911b5c48059d2e3e",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\911b5c48059d2e3e",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55339%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "a71cefaa367e90bb",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\a71cefaa367e90bb",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55340%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "707b1be6e70794b2",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\707b1be6e70794b2",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-43302%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "dd45caedb2982849",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\dd45caedb2982849",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-45322%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "e268bb3cb7c5b7af",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\e268bb3cb7c5b7af",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-45340%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "1f0cee89edc1552f",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\1f0cee89edc1552f",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-45323%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "0aa96c4b9345fc32",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\0aa96c4b9345fc32",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55331%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "2e60d209f3c45f3a",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\2e60d209f3c45f3a",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55332%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "60e6af6cdfd0ba16",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\60e6af6cdfd0ba16",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55333%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "fcb060d734be3035",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\fcb060d734be3035",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55335%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "d76e30032828a5ce",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\d76e30032828a5ce",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fassmann-products%2Fds-55334%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "3efb63d743142055",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\3efb63d743142055",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fproducts%2Fds-45100-1%2F01.jpg&w=256&q=90"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "6d920b91933aa5c4",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\bd100ded-16c0-4dda-b9a3-7ba72c656075\\6d920b91933aa5c4",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fproducts%2Fds-44100-1%2F01.jpg&w=256&q=90"
+    }
+  ],
+  "failures": []
+}

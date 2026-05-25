@@ -1,0 +1,37 @@
+{
+  "assets": [
+    {
+      "contentType": "image/avif",
+      "id": "47fa37b19ed1fb35",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\9b7b930d-4aa1-4fc8-85c9-3637ac2e7575\\47fa37b19ed1fb35",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fartnet%2Flogo-new.png&w=256&q=75"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "18ee4e98dd7b3013",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\9b7b930d-4aa1-4fc8-85c9-3637ac2e7575\\18ee4e98dd7b3013",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fartnet%2Fhome-categories%2Fnetworking.jpg&w=640&q=75"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "b399e75fb870de90",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\9b7b930d-4aa1-4fc8-85c9-3637ac2e7575\\b399e75fb870de90",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fartnet%2Fhome-categories%2Fwifi-wireless.png&w=640&q=75"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "a9bdd3fa2ae77429",
+      "kind": "image",
+      "name": "image",
+      "path": "C:\\Users\\PC\\AppData\\Local\\Temp\\browser-use\\assets\\9b7b930d-4aa1-4fc8-85c9-3637ac2e7575\\a9bdd3fa2ae77429",
+      "url": "https://artnet-ks.vercel.app/_next/image?url=%2Fimages%2Fartnet%2Fhome-categories%2Fsurveillance.png&w=640&q=75"
+    }
+  ],
+  "failures": []
+}
