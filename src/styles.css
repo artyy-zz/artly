@@ -4345,12 +4345,25 @@ body.modal-open {
 }
 
 .connected-scroll .project-card.reveal {
-  opacity: 1;
-  filter: none;
-  transform: none;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate3d(0, 34px, 0) scale(0.975);
+  transition:
+    opacity 760ms ease,
+    filter 760ms ease,
+    transform 760ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
 }
 
-.connected-scroll .project-card.reveal:hover {
+.connected-scroll .project-card.reveal.is-visible {
+  opacity: var(--connected-opacity, 1);
+  filter: blur(var(--connected-blur, 0));
+  transform: translate3d(0, var(--connected-y, 0), 0) scale(var(--connected-scale, 1));
+}
+
+.connected-scroll .project-card.reveal.is-visible:hover {
   transform: translateY(-7px) rotateX(1deg) rotateY(-1deg);
 }
 
@@ -5853,8 +5866,9 @@ body::after {
 
   .project-card {
     transition:
-      opacity 260ms ease,
-      transform 260ms ease,
+      opacity 620ms ease,
+      transform 620ms cubic-bezier(0.16, 1, 0.3, 1),
+      filter 620ms ease,
       max-height 360ms ease,
       border-color 200ms ease,
       background 200ms ease;
@@ -6334,5 +6348,27 @@ body::after {
 
   .modal-visual .concept-desktop {
     right: 48px;
+  }
+}
+
+@media (max-width: 700px) {
+  #projects .project-card.reveal {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translate3d(0, 26px, 0) scale(0.985);
+    transition:
+      opacity 680ms ease,
+      filter 680ms ease,
+      transform 680ms cubic-bezier(0.16, 1, 0.3, 1),
+      max-height 380ms ease,
+      border-color 200ms ease,
+      background 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  #projects .project-card.reveal.is-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
