@@ -364,7 +364,7 @@ const mobileViewport = window.matchMedia("(max-width: 700px)");
 let projectsExpanded = false;
 
 const conceptLabels = {
-  sq: { home: "Ballina", explore: "Shfleto", contact: "Kontakt", action: "Shiko" },
+  sq: { home: "Ballina", explore: "Shiko", contact: "Kontakt", action: "Shiko" },
   en: { home: "Home", explore: "Explore", contact: "Contact", action: "View" },
   de: { home: "Start", explore: "Entdecken", contact: "Kontakt", action: "Ansehen" },
 };
