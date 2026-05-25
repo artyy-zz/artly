@@ -5544,3 +5544,156 @@ body::after {
     min-width: 28px;
   }
 }
+
+/* Final mobile polish: faster, shorter, easier to tap */
+@media (max-width: 700px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .hero {
+    padding: 24px 0 34px;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-size: clamp(1.86rem, 8.5vw, 2.18rem);
+    line-height: 1.04;
+  }
+
+  .hero-text {
+    margin-top: 12px;
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+
+  .hero-actions {
+    gap: 9px;
+    margin-top: 18px;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 12px 16px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .service-flow-section {
+    padding-top: 48px;
+  }
+
+  .project-visual,
+  .project-card .concept-scene {
+    min-height: clamp(132px, 37vw, 160px);
+  }
+
+  .project-card .concept-desktop {
+    top: 14px;
+  }
+
+  .concept-site {
+    min-height: 112px;
+  }
+
+  .concept-browser-bar {
+    height: 25px;
+  }
+
+  .concept-site nav {
+    height: 28px;
+    padding: 0 11px;
+  }
+
+  .concept-site-body {
+    padding: 11px;
+  }
+
+  .site-hero {
+    min-height: 74px;
+  }
+
+  .site-hero small {
+    font-size: 0.48rem;
+  }
+
+  .site-hero h4 {
+    font-size: 0.9rem;
+  }
+
+  .site-photo {
+    min-height: 68px;
+  }
+
+  .project-body {
+    padding: 14px 15px 7px;
+  }
+
+  .project-card .tag-row {
+    padding: 0 15px 15px;
+  }
+
+  .flow-step {
+    padding: 16px;
+  }
+
+  .contact-methods {
+    gap: 14px;
+  }
+
+  .contact-method {
+    min-height: 82px;
+    padding: 14px;
+  }
+
+  .quote-form {
+    gap: 18px;
+  }
+
+  .form-row {
+    gap: 9px;
+  }
+
+  input,
+  select,
+  textarea {
+    min-height: 56px;
+  }
+
+  .site-footer {
+    padding: 44px 0 30px;
+  }
+
+  .footer-grid {
+    gap: 26px;
+  }
+
+  .footer-column {
+    gap: 8px;
+  }
+
+  .footer-column h3 {
+    margin: 0 0 2px;
+  }
+
+  .footer-column a,
+  .footer-column button {
+    width: 100%;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    text-align: left;
+  }
+
+  .footer-bottom {
+    padding-top: 18px;
+  }
+}
