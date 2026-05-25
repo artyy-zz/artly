@@ -98,6 +98,9 @@ const translations = {
       eyebrow: "Ide",
       title: "Ide për biznesin tuaj",
       subtitle: "Pamje të ndryshme që mund t’i krijojmë. Zgjidhni stilin që i përshtatet biznesit tuaj.",
+      showMore: "Shiko më shumë",
+      showLess: "Shiko më pak",
+      view: "Shiko",
       modalCta: "Dua një ide si kjo",
       cards: [
         { title: "Interior Vision", category: "Furniture Concept", text: "Koncept premium për mobilieri dhe interier.", tags: ["Concept", "Mobile Ready"], image: "assets/projects/art-home.png" },
@@ -190,6 +193,9 @@ const translations = {
       eyebrow: "Ideas",
       title: "Ideas for your business",
       subtitle: "Different website styles we can create. Choose the look that fits your business.",
+      showMore: "Show More",
+      showLess: "Show Less",
+      view: "View",
       modalCta: "I want an idea like this",
       cards: [
         { title: "Interior Vision", category: "Furniture Concept", text: "A premium concept for furniture and interiors.", tags: ["Concept", "Mobile Ready"], image: "assets/projects/art-home.png" },
@@ -276,6 +282,9 @@ const translations = {
       eyebrow: "Ideen",
       title: "Ideen für Ihr Unternehmen",
       subtitle: "Verschiedene Website-Stile, die wir erstellen können. Wählen Sie den Look, der zu Ihrem Unternehmen passt.",
+      showMore: "Mehr anzeigen",
+      showLess: "Weniger anzeigen",
+      view: "Ansehen",
       modalCta: "Ich möchte eine Idee wie diese",
       cards: [
         { title: "Interior Vision", category: "Möbelkonzept", text: "Ein Premium-Konzept für Möbel und moderne Innenräume.", tags: ["Konzept", "Mobil"], image: "assets/projects/art-home.png" },
@@ -325,6 +334,7 @@ const languageNames = { sq: "Albanian", en: "English", de: "German" };
 const state = { lang: localStorage.getItem("artly-language") || "sq", activeProject: 0 };
 if (!translations[state.lang]) state.lang = "sq";
 const mobileViewport = window.matchMedia("(max-width: 700px)");
+let projectsExpanded = false;
 
 const getValue = (path) =>
   path.split(".").reduce((value, key) => (value && Object.hasOwn(value, key) ? value[key] : undefined), translations[state.lang]);
@@ -523,11 +533,13 @@ const renderConceptScene = (project, index, size = "card") => {
 const renderProjects = () => {
   const target = document.querySelector("[data-render='projectCards']");
   if (!target) return;
-  target.innerHTML = translations[state.lang].projects.cards
+  const projects = translations[state.lang].projects;
+  target.classList.toggle("is-expanded", projectsExpanded);
+  target.innerHTML = projects.cards
     .map((project, index) => {
       const visibleTags = project.tags.slice(0, 2);
       return `
-        <button class="project-card reveal" type="button" data-project-index="${index}" data-project-card="${index}">
+        <article class="project-card reveal" role="button" tabindex="0" data-project-index="${index}" data-project-card="${index}">
           <span class="project-category">${project.category}</span>
           <div class="project-visual">
             ${renderConceptScene(project, index)}
@@ -537,10 +549,12 @@ const renderProjects = () => {
             <span>${project.text}</span>
           </span>
           <span class="tag-row">${visibleTags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</span>
-        </button>
+          <span class="project-open-button">${projects.view}</span>
+        </article>
       `;
     })
-    .join("");
+    .join("") +
+    `<button class="projects-toggle" type="button" data-projects-toggle aria-expanded="${projectsExpanded}">${projectsExpanded ? projects.showLess : projects.showMore}</button>`;
 };
 
 const renderProcess = () => {
@@ -603,8 +617,24 @@ const closeProjectModal = () => {
 };
 
 const bindProjectCards = () => {
-  document.querySelectorAll("[data-project-index]").forEach((button) => {
-    button.addEventListener("click", () => openProjectModal(Number(button.dataset.projectIndex)));
+  document.querySelectorAll("[data-project-index]").forEach((card) => {
+    card.addEventListener("click", () => openProjectModal(Number(card.dataset.projectIndex)));
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      openProjectModal(Number(card.dataset.projectIndex));
+    });
+  });
+
+  document.querySelector("[data-projects-toggle]")?.addEventListener("click", () => {
+    const projectsSection = document.querySelector("#projects");
+    const previousTop = projectsSection?.getBoundingClientRect().top || 0;
+    projectsExpanded = !projectsExpanded;
+    renderProjects();
+    bindProjectCards();
+    observeReveal();
+    const nextTop = projectsSection?.getBoundingClientRect().top || 0;
+    window.scrollBy({ top: nextTop - previousTop, behavior: "smooth" });
   });
 };
 
