@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { ArrowUpRight, X } from "lucide-react";
-import { c, projectTag, type Project, type ServiceSlug } from "@/lib/content";
+import { c, projectTag, type Project } from "@/lib/content";
 import { useSite } from "./providers";
 import { Mockup } from "./mockup";
 import { Button } from "./ui";
@@ -56,12 +56,10 @@ export function ProjectCard({
 export function ProjectDialog({
   project,
   onClose,
-  service,
   variant = "website",
 }: {
   project: Project | null;
   onClose: () => void;
-  service?: ServiceSlug;
   variant?: string;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
@@ -206,9 +204,7 @@ export function ProjectDialog({
                 ),
               )}
             </p>
-            <Button
-              href={`/contact?service=${service ?? project.service ?? "websites"}&concept=${encodeURIComponent(project.name)}`}
-            >
+            <Button href="/contact">
               {t(c("Dua diçka të tillë", "Create something like this"))}
             </Button>
           </div>

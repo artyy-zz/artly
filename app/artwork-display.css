@@ -178,5 +178,3 @@
 
 /* Curated work keeps its original format in the portfolio. */
 .showcase-single .showcase-browser{inset:5%!important;width:90%!important;height:90%!important;transform:none!important}.showcase-single .showcase-browser .artwork-preview{width:100%;height:100%}.showcase-single .showcase-browser img{object-fit:contain!important;height:100%!important}.variant-logo-dark,.variant-logo-light{aspect-ratio:1.5}.variant-logo-dark img,.variant-logo-light img{object-fit:contain!important}
-
-.quote-services .quote-other{grid-column:1/-1;min-height:76px;flex-direction:row;align-items:center;gap:16px}.quote-services .quote-other>svg:first-of-type{display:block;width:23px;height:23px;flex-shrink:0}.quote-other small{font-size:13px;color:var(--muted);font-weight:400}.estimate-value.estimate-custom{font-size:clamp(22px,3vw,32px);line-height:1.2;letter-spacing:-.035em}

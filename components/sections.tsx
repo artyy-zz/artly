@@ -6,7 +6,6 @@ import {
   MessageCircle,
   Layers,
   ArrowUpRight,
-  Check,
 } from "lucide-react";
 import { c, services, type Copy } from "@/lib/content";
 import { useSite } from "./providers";
@@ -138,106 +137,6 @@ export function Process() {
     </section>
   );
 }
-export function Pricing() {
-  const { t } = useSite();
-  const packages = [
-    {
-      service: services[0],
-      desc: c("Një fillim i fortë online.", "A strong start online."),
-      features: [
-        c("Deri në 5 faqe prezantimi", "Up to 5 presentation pages"),
-        c("Dizajn për çdo ekran", "Design for every screen"),
-        c("Strukturë e lehtë për t’u zgjeruar", "A structure built to grow"),
-      ],
-    },
-    {
-      service: services[2],
-      desc: c("Një brand që ndihet i yti.", "A brand that feels like you."),
-      features: [
-        c("Logo & variante", "Logo & variations"),
-        c("Paletë ngjyrash & tipografi", "Color palette & typography"),
-        c("Udhëzues i identitetit", "Identity guidelines"),
-      ],
-    },
-    {
-      service: services[3],
-      desc: c("Një prezencë me vazhdimësi.", "A presence with consistency."),
-      features: [
-        c("Plan mujor i përmbajtjes", "Monthly content plan"),
-        c("8 postime të dizajnuara", "8 designed posts"),
-        c("Menaxhim i 1 platforme", "Management of 1 platform"),
-      ],
-    },
-  ];
-  return (
-    <section className="section pricing-section container">
-      <SectionHeading
-        number="04"
-        kicker={c("INVESTIMI YT", "YOUR INVESTMENT")}
-        title={c(
-          "Ide të qarta. Çmime të qarta.",
-          "Clear ideas. Clear pricing.",
-        )}
-        description={c(
-          "Paketa fillestare orientuese. Hapësirë për ta bërë tënden.",
-          "Illustrative starting packages. Room to make them your own.",
-        )}
-      />
-      <div className="pricing-grid">
-        {packages.map(({ service, desc, features }, i) => (
-          <Reveal
-            className={`price-card ${i === 0 ? "featured" : ""}`}
-            key={service.slug}
-            delay={i * 0.05}
-          >
-            <div className="price-top">
-              <h3>{t(service.title)}</h3>
-              {i === 0 && <span>{t(c("FILLIM I MIRË", "A GREAT START"))}</span>}
-            </div>
-            <p>{t(desc)}</p>
-            <div className="price">
-              <small>{t(c("nga", "from"))}</small> €{service.price}
-              {i === 2 && <small>/{t(c("muaj", "month"))}</small>}
-            </div>
-            <ul>
-              {features.map((feature) => (
-                <li key={feature.en}>
-                  <Check size={15} />
-                  {t(feature)}
-                </li>
-              ))}
-            </ul>
-            <Button
-              href={`/contact?service=${service.slug}`}
-              secondary={i !== 0}
-            >
-              {t(c("Ndërto projektin", "Build your project"))}
-            </Button>
-          </Reveal>
-        ))}
-      </div>
-      <div className="pricing-note">
-        <p>
-          {t(
-            c(
-              "Çmimet janë shembuj orientues. Faqet shtesë, sistemet, funksionalitetet dhe kërkesat e veçanta ndikojnë në çmimin përfundimtar të website-it.",
-              "Prices are illustrative examples. Extra pages, systems, functionality, and custom requirements affect the final website price.",
-            ),
-          )}
-        </p>
-        <Link href="/contact">
-          {t(
-            c(
-              "Ke nevojë për diçka ndryshe? Krijojmë ofertë sipas projektit.",
-              "Need something different? We tailor a quote to your project.",
-            ),
-          )}
-          <ArrowUpRight size={17} />
-        </Link>
-      </div>
-    </section>
-  );
-}
 export function ContactCTA() {
   const { t } = useSite();
   return (
@@ -254,7 +153,7 @@ export function ContactCTA() {
             <span>{t(c("Mund të jetë e jotja.", "It could be yours."))}</span>
           </h2>
           <Button href="/contact">
-            {t(c("Fillo projektin", "Start a project"))}
+            {t(c("Diskutojmë projektin", "Let’s discuss your project"))}
           </Button>
         </div>
         <Arti pose="pointing" size="clamp(175px, 18vw, 245px)" className="cta-arti" interactive />

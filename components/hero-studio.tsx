@@ -5,7 +5,6 @@ import { ArrowUpRight } from "lucide-react";
 import { c, projects } from "@/lib/content";
 import { useSite } from "./providers";
 import { Mockup } from "./mockup";
-import { Arti } from "./arti";
 export function HeroStudio() {
   const { t } = useSite();
   const reduced = useReducedMotionPreference();
@@ -36,14 +35,6 @@ export function HeroStudio() {
         <span>001 — {t(c("NJË BOTË VIZUALE", "A VISUAL WORLD"))}</span>
       </div>
       <span className="canvas-orbit" aria-hidden="true" />
-      <Arti
-        pose="wave"
-        size="clamp(150px, 15vw, 205px)"
-        className="hero-arti"
-        interactive
-        preload
-        label={t(c("Arti, maskota e Artly, duke përshëndetur", "Arti, Artly's mascot, waving hello"))}
-      />
       <motion.div
         className="studio-composition"
         style={reduced ? {} : { rotateX, rotateY }}

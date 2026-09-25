@@ -8,9 +8,9 @@
     "ink": "#344b37",
     "photo": "beauty-mask",
     "title": "Kujdes që vjen\nnga natyra.",
-    "kicker": "Rituali i fytyrës · 35 €",
+    "kicker": "Rituali i fytyrës · Kujdes sezonal",
     "body": "Për lëkurë të qetë dhe të hidratuar.",
-    "cta": "Rezervo termin / Prishtinë"
+    "cta": "Na shkruaj për termin / Prishtinë"
   },
   {
     "id": "dita-books",
@@ -23,7 +23,7 @@
     "title": "Edhe një\nkapitull.",
     "kicker": "Java e leximit / 21–27 shtator",
     "body": "Tre libra të përzgjedhur. Një fillim i ri.",
-    "cta": "−15% në letërsi / Prizren"
+    "cta": "Zbulo përzgjedhjen / Prizren"
   },
   {
     "id": "volt",
@@ -32,11 +32,11 @@
     "style": "tech",
     "color": "#173dc7",
     "ink": "#e7ff7b",
-    "photo": "",
+    "photo": "headphones",
     "title": "Zëri yt.\nPa kabllo.",
-    "kicker": "Kufje V1 / 39 €",
+    "kicker": "Kufje V1 / Seria e re",
     "body": "32 orë bateri · Lidhje Bluetooth · Garanci 12 muaj",
-    "cta": "Porosit tani / Gjilan"
+    "cta": "Zbulo produktin / Gjilan"
   },
   {
     "id": "petal",
@@ -45,11 +45,11 @@
     "style": "flowers",
     "color": "#f8c9ba",
     "ink": "#8c2636",
-    "photo": "",
+    "photo": "florist",
     "title": "Një gjest\nqë çel.",
-    "kicker": "Buqeta nga 18 €",
+    "kicker": "Buqeta të punuara me dorë",
     "body": "Lule të freskëta, të lidhura me dorë.",
-    "cta": "Porosi deri në 12:00 / Pejë"
+    "cta": "Na shkruaj / Pejë"
   },
   {
     "id": "orbit",
@@ -62,7 +62,7 @@
     "title": "Fjalë të reja.\nMundësi të reja.",
     "kicker": "Gjermanisht A1 / Regjistrimet hapen",
     "body": "Grupet nisin më 5 tetor. Dy takime në javë.",
-    "cta": "Rezervo vendin / Ferizaj"
+    "cta": "Pyet për grupet / Ferizaj"
   },
   {
     "id": "thur",
@@ -73,7 +73,7 @@
     "ink": "#493728",
     "photo": "chair",
     "title": "Një kënd\npër veten.",
-    "kicker": "Kolltuku Lin / 390 €",
+    "kicker": "Kolltuku Lin / Koleksioni i ri",
     "body": "Pëlhurë natyrale. Rehati që zgjat.",
     "cta": "Na vizito në sallon / Gjakovë"
   },
@@ -84,11 +84,11 @@
     "style": "music",
     "color": "#dafa35",
     "ink": "#301851",
-    "photo": "",
+    "photo": "nightlife",
     "title": "NATA\nJONË.",
     "kicker": "JEHONA / SESIONI 04",
     "body": "DJ Ardi · Lira B · Drin\nE premte, 25 shtator / 21:00",
-    "cta": "Hyrja 8 € / Prishtinë"
+    "cta": "25 shtator / Prishtinë"
   },
   {
     "id": "skena",
@@ -97,11 +97,11 @@
     "style": "theatre",
     "color": "#d5c9b7",
     "ink": "#232323",
-    "photo": "",
+    "photo": "interior",
     "title": "NJË DHOMË.\nDY HISTORI.",
     "kicker": "TEATËR I PAVARUR / SKENA 7",
     "body": "Një shfaqje për atë që themi\ndhe atë që mbetet pa u thënë.",
-    "cta": "3 tetor / 19:30 / Prizren / Bileta 6 €"
+    "cta": "3 tetor / 19:30 / Prizren"
   },
   {
     "id": "pedal",
@@ -110,7 +110,7 @@
     "style": "cycle",
     "color": "#b9ddf0",
     "ink": "#133f2c",
-    "photo": "",
+    "photo": "cycling",
     "title": "Qyteti\nme dy rrota.",
     "kicker": "XHIRO E HAPUR / PA GARË",
     "body": "E diel, 27 shtator · 09:00\nNisja: Sheshi i qytetit · 12 km",
@@ -126,7 +126,7 @@
     "photo": "pasta",
     "title": "Të dielën,\nrrimë gjatë.",
     "kicker": "DREKË FAMILJARE / VERANDË",
-    "body": "Tri pjata të stinës · 19 € për person\nE diel / 12:00–17:00",
+    "body": "Tri pjata të stinës · Shije që ndahen\nE diel / 12:00–17:00",
     "cta": "Rezervo tavolinën / Gjakovë"
   },
   {
@@ -178,7 +178,7 @@
     "photo": "landscape",
     "title": "Larg zhurmës.\nPranë vetes.",
     "kicker": "UDHËTIME TË VOGLA / VJESHTË 2026",
-    "body": "Rugovë · Shëtitje me udhërrëfyes\nTransport nga Prishtina · Nga 29 €",
+    "body": "Rugovë · Shëtitje me udhërrëfyes\nTransport nga Prishtina · Grup i vogël",
     "cta": "Zbulo itinerarin / Valë Travel"
   },
   {

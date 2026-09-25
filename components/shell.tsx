@@ -100,7 +100,7 @@ export function Header() {
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <Button href="/contact" className="header-cta">
-            {t(c("Fillo projektin", "Start a project"))}
+            {t(c("Na kontakto", "Contact us"))}
           </Button>
           <button
             className="icon-button mobile-menu"
@@ -139,7 +139,7 @@ export function Header() {
               </Link>
             ))}
             <Button href="/contact" onClick={() => setOpen(false)}>
-              {t(c("Fillo projektin", "Start a project"))}
+              {t(c("Na kontakto", "Contact us"))}
             </Button>
           </nav>
         )}
@@ -223,7 +223,7 @@ export function AssistantButton() {
           {options.map(([s, label]) => (
             <Link
               key={s}
-              href={`/contact?service=${s}`}
+              href="/contact"
               onClick={() => setOpen(false)}
             >
               {t(label)}

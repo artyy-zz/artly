@@ -17,8 +17,7 @@ export const services = [
     "description": {
       "sq": "Faqe të shpejta, të qarta dhe të menduara për klientët tuaj.",
       "en": "Fast, clear websites built around your customers."
-    },
-    "price": 490
+    }
   },
   {
     "slug": "logo-design",
@@ -30,8 +29,7 @@ export const services = [
     "description": {
       "sq": "Shenja origjinale që i japin biznesit tuaj një karakter të dallueshëm.",
       "en": "Original marks that give your business a distinctive character."
-    },
-    "price": 150
+    }
   },
   {
     "slug": "social-management",
@@ -43,8 +41,7 @@ export const services = [
     "description": {
       "sq": "Planifikim, publikim dhe kujdes i vazhdueshëm për komunitetin tuaj.",
       "en": "Planning, publishing and ongoing care for your community."
-    },
-    "price": 250
+    }
   },
   {
     "slug": "graphic-design",
@@ -56,8 +53,7 @@ export const services = [
     "description": {
       "sq": "Nga postimi te posteri: komunikim vizual i punuar për çdo format.",
       "en": "From posts to posters: visual communication crafted for every format."
-    },
-    "price": 60
+    }
   }
 ] as const;
 export type ServiceSlug = (typeof services)[number]["slug"];
@@ -114,12 +110,3 @@ export const contactDetails: {
   instagram: string | null;
   whatsapp: string | null;
 } = { email: null, instagram: null, whatsapp: null };
-export const pricing = {
-  extraPage: 45,
-  bilingual: 120,
-  animations: 100,
-  contactForm: 40,
-  shop: 500,
-  custom: 700,
-  rangeMultiplier: 1.4,
-};

@@ -182,14 +182,10 @@ export function ServiceDetail({ slug }: { slug: ServiceSlug }) {
           </h1>
           <p>{t(service.description)}</p>
           <div className="detail-actions">
-            <Button href={`/contact?service=${slug}`}>
-              {t(c("Fillo projektin", "Start a project"))}
+            <Button href="/contact">
+              {t(c("Na kontakto", "Contact us"))}
             </Button>
-            <span>
-              {t(c("Çmime orientuese nga", "Illustrative prices from"))} €
-              {service.price}
-              {slug === "social-management" ? t(c("/muaj", "/month")) : ""}
-            </span>
+            <span>{t(c("Na trego çfarë ke në mendje.", "Tell us what you have in mind."))}</span>
           </div>
         </Reveal>
         <div className="detail-feature">
@@ -228,7 +224,6 @@ export function ServiceDetail({ slug }: { slug: ServiceSlug }) {
       <ContactCTA />
       <ProjectDialog
         project={selected}
-        service={slug}
         variant={variant}
         onClose={() => setSelected(null)}
       />

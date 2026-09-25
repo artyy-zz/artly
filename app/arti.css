@@ -76,9 +76,6 @@
 .cta-arti {
   margin-right: 3%;
 }
-.quote-arti {
-  margin: -8px auto -18px;
-}
 
 @media (max-width: 1000px) {
   .hero-arti {
@@ -126,10 +123,6 @@
   .cta-arti {
     width: 150px !important;
     margin: 0 -12px -15px 0;
-  }
-  .quote-arti {
-    width: 170px !important;
-    margin-bottom: -10px;
   }
 }
 

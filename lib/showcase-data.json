@@ -89,7 +89,7 @@
     "creative": "",
     "city": "Prishtinë",
     "approachSq": "Nexora paraqitet si softuer për ekipet lokale. Një tabelë pune me detyra, afate dhe përgjegjësi e bën produktin të kuptueshëm, ndërsa çmimet dhe përfitimet shpjegohen pa fjalë të tepërta.",
-    "approach": "A real task board with deadlines and responsibilities explains the local team software alongside clear pricing and product benefits."
+    "approach": "A real task board with deadlines and responsibilities explains the local team software alongside clear product benefits."
   },
   {
     "id": "kafe-noir",
@@ -158,7 +158,7 @@
     "creative": "brochure",
     "city": "Prishtinë",
     "approachSq": "Prona Plus vendos informacionin e pronës në qendër: çmimin, lokacionin, sipërfaqen dhe planimetrinë. Kërkimi, kartelat dhe broshura e pronës ndërtojnë një prezantim të qartë dhe të afërt.",
-    "approach": "Price, location, area, and layout lead the property search experience, listing cards, and finished property brochure."
+    "approach": "Location, area, and layout lead the property search experience, listing cards, and finished property brochure."
   },
   {
     "id": "forma-studio",
@@ -204,7 +204,7 @@
     "creative": "appointment",
     "city": "Pejë",
     "approachSq": "Aura Beauty ka një shenjë petalesh të ndërthurura dhe tipografi të butë. Trajtimet, çmimet dhe oraret shfaqen qartë; kartela e terminit dhe fushata promocionale e bëjnë identitetin të përdorshëm në studio.",
-    "approach": "Interlocking petals and soft typography extend through treatments, prices, opening times, appointment cards, and the studio campaign."
+    "approach": "Interlocking petals and soft typography extend through treatments, opening times, appointment cards, and the studio campaign."
   },
   {
     "id": "udhetime-bjeshka",
@@ -227,7 +227,7 @@
     "creative": "",
     "city": "Pejë",
     "approachSq": "Bjeshka e ndërton identitetin rreth vijës së një shtegu malor. Website-i tregon udhëtime me destinacion, kohëzgjatje, çmim dhe çfarë përfshihet, me fotografi që e vendos natyrën në plan të parë.",
-    "approach": "A mountain trail mark anchors detailed trips with destinations, durations, prices, inclusions, and immersive landscape photography."
+    "approach": "A mountain trail mark anchors detailed trips with destinations, durations, inclusions, and immersive landscape photography."
   },
   {
     "id": "kora",
@@ -296,7 +296,7 @@
     "creative": "",
     "city": "Prizren",
     "approachSq": "Sofra 21: menu e plotë me çmime lokale, tipografi të punuar dhe identitet të veçantë.",
-    "approach": "Sofra 21: a complete menu with local pricing, considered typography, and a distinct identity."
+    "approach": "Sofra 21: a complete menu with considered typography and a distinct identity."
   },
   {
     "id": "era-restorant",
@@ -319,7 +319,7 @@
     "creative": "",
     "city": "Prishtinë",
     "approachSq": "Era: menu e plotë me çmime lokale, tipografi të punuar dhe identitet të veçantë.",
-    "approach": "Era: a complete menu with local pricing, considered typography, and a distinct identity."
+    "approach": "Era: a complete menu with considered typography and a distinct identity."
   },
   {
     "id": "lumi-bistro",
@@ -342,7 +342,7 @@
     "creative": "",
     "city": "Pejë",
     "approachSq": "Lumi Bistro: menu e plotë me çmime lokale, tipografi të punuar dhe identitet të veçantë.",
-    "approach": "Lumi Bistro: a complete menu with local pricing, considered typography, and a distinct identity."
+    "approach": "Lumi Bistro: a complete menu with considered typography and a distinct identity."
   },
   {
     "id": "flaka",
@@ -365,6 +365,6 @@
     "creative": "",
     "city": "Prishtinë",
     "approachSq": "Flaka: menu e plotë me çmime lokale, tipografi të punuar dhe identitet të veçantë.",
-    "approach": "Flaka: a complete menu with local pricing, considered typography, and a distinct identity."
+    "approach": "Flaka: a complete menu with considered typography and a distinct identity."
   }
 ]

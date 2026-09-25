@@ -11,7 +11,6 @@ import {
   SectionHeading,
   ServiceGrid,
   Process,
-  Pricing,
   ContactCTA,
 } from "./sections";
 export function Home() {
@@ -45,7 +44,7 @@ export function Home() {
             </p>
             <div className="hero-buttons">
               <Button href="/contact">
-                {t(c("Fillo projektin", "Start a project"))}
+                {t(c("Na kontakto", "Contact us"))}
               </Button>
               <Button href="/portfolio" secondary>
                 {t(c("Shiko punët tona", "Explore our work"))}
@@ -137,7 +136,6 @@ function HomeSections() {
         <ServiceGrid preview />
       </section>
       <Process />
-      <Pricing />
       <ContactCTA />
       <ProjectDialog project={selected} onClose={() => setSelected(null)} />
     </>

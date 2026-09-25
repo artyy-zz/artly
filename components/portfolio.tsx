@@ -697,7 +697,7 @@ export function Portfolio() {
               {t(c("PAK PËR MUA", "A LITTLE ABOUT ME"))}
             </Chapter>
             <h2 id="about-title">
-              Arti Bela<span className={s.nameDot}>.</span>
+              Arti<span className={s.nameDot}>.</span>
             </h2>
             <p className={s.role}>Digital Creator / Developer / Designer</p>
             <div className={s.location}>

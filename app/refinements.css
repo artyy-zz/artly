@@ -244,6 +244,34 @@
   inset: 0;
   transform-style: preserve-3d;
 }
+.hero-canvas .studio-composition{transform:translateX(2%) scale(1.04);transform-origin:center}
+.hero-canvas .studio-web{left:7%;width:86%}
+.hero-canvas .studio-identity{left:2%;bottom:12%}
+.hero-canvas .studio-menu{right:25%;bottom:6%}
+.hero-canvas .studio-print{right:-1%;bottom:10%}
+
+/* Contact is a conversation, with one simple brief instead of an estimator. */
+.contact-page{padding-top:clamp(72px,8vw,120px);padding-bottom:clamp(90px,10vw,150px)}
+.contact-intro{max-width:920px;margin-bottom:64px}
+.contact-intro h1{font-size:clamp(64px,8.6vw,132px);line-height:.82;letter-spacing:-.075em;margin:28px 0 34px}
+.contact-intro h1 span{font-family:var(--font-serif);font-weight:400;font-style:italic;color:var(--accent);letter-spacing:-.04em}
+.contact-intro>p{font-size:clamp(17px,1.55vw,22px);line-height:1.65;color:var(--muted);max-width:720px}
+.contact-simple-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(330px,.7fr);gap:28px;align-items:start}
+.contact-form-panel,.contact-side-panel{border:1px solid var(--line);background:var(--surface);padding:clamp(28px,4vw,56px)}
+.contact-panel-kicker{display:block;font:11px var(--font-mono);letter-spacing:.12em;color:var(--accent);margin-bottom:28px}
+.contact-form-panel h2,.contact-side-panel h2{font-size:clamp(38px,4.2vw,66px);letter-spacing:-.05em;margin:0 0 36px}
+.contact-side-panel h2{font-size:clamp(36px,3vw,52px);line-height:1.02}
+.contact-form-panel form{display:grid;gap:28px}.contact-field-pair{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact-form-panel label{display:grid;gap:10px}.contact-form-panel label>span{font-size:12px;color:var(--muted)}
+.contact-form-panel input,.contact-form-panel select,.contact-form-panel textarea{width:100%;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--text);font:inherit;padding:13px 0;outline:none;transition:border-color .2s}
+.contact-form-panel textarea{border:1px solid var(--line);padding:16px;resize:vertical;min-height:150px}.contact-form-panel select{cursor:pointer}.contact-form-panel select option{background:var(--surface);color:var(--text)}
+.contact-form-panel input:focus,.contact-form-panel select:focus,.contact-form-panel textarea:focus{border-color:var(--accent)}
+.contact-submit{width:max-content;margin-top:4px}.contact-form-note{font-size:12px;line-height:1.6;color:var(--muted);max-width:620px}
+.contact-side-panel{position:sticky;top:110px;background:var(--accent-soft)}.contact-side-panel>p{color:var(--muted);line-height:1.7;margin:0 0 34px}
+.contact-channel-list{display:grid;border-top:1px solid var(--line)}.contact-channel-list>a,.contact-channel-list>div{display:grid;grid-template-columns:26px 1fr auto;align-items:center;gap:12px;padding:20px 0;border-bottom:1px solid var(--line)}.contact-channel-list>div{color:var(--muted)}.contact-channel-list small{font:10px var(--font-mono);letter-spacing:.06em}
+.contact-response-note{display:flex;gap:12px;align-items:flex-start;margin-top:38px}.contact-response-note .status-dot{margin-top:7px}.contact-response-note p{font-size:13px;line-height:1.6}
+@media(max-width:900px){.contact-simple-grid{grid-template-columns:1fr}.contact-side-panel{position:static}.contact-field-pair{grid-template-columns:1fr}.contact-intro h1{font-size:clamp(58px,14vw,96px)}}
+@media(max-width:520px){.contact-page{padding-top:52px}.contact-intro{margin-bottom:40px}.contact-intro h1{font-size:56px;margin-block:22px 28px}.contact-form-panel,.contact-side-panel{padding:24px}.contact-form-panel h2,.contact-side-panel h2{font-size:40px;margin-bottom:28px}.contact-submit{width:100%}}
 .studio-web {
   position: absolute;
   top: 17%;
@@ -702,25 +730,9 @@
   line-height: 1.7;
   max-width: 450px;
 }
-.pricing-section {
-  padding-top: 135px;
-}
-.price-card {
-  background: transparent;
-  padding: 32px;
-  border-radius: 5px;
-}
-.price-card.featured {
-  background: var(--surface);
-  border-color: #9d89d56e;
-}
 .price-top h3 {
   font-size: 21px;
   font-weight: 450;
-}
-.price-card > p {
-  font-size: 14px;
-  line-height: 1.6;
 }
 .price {
   font-size: 52px;
@@ -730,30 +742,9 @@
 .price small {
   font-size: 13px;
 }
-.price-card li {
-  font-size: 14px;
-}
-.price-card ul {
-  padding-block: 25px 30px;
-  gap: 16px;
-}
-.price-card .button {
-  font-size: 13px;
-}
 .price-top > span {
   font-size: 9px;
   border-radius: 2px;
-}
-.pricing-note {
-  gap: 50px;
-  line-height: 1.8;
-}
-.pricing-note p {
-  font-size: 12px;
-}
-.pricing-note a {
-  font-size: 13px;
-  max-width: 350px;
 }
 .cta-section {
   padding-block: 130px 95px;
@@ -1386,215 +1377,12 @@
 .contact-intro h1 {
   font-size: clamp(48px, 5.7vw, 86px);
 }
-.quote-layout {
-  grid-template-columns: minmax(0, 1fr) 365px;
-  gap: 38px;
-  padding-bottom: 100px;
-}
-.quote-main {
-  background: var(--surface);
-  border-radius: 6px;
-  padding: 34px;
-  border-color: var(--line);
-  box-shadow: var(--card-shadow);
-}
 .builder-kicker {
   font: 10px var(--font-mono);
   letter-spacing: 0.12em;
   color: var(--accent);
   display: block;
   margin-bottom: 13px;
-}
-.quote-title h2 {
-  font-size: 32px;
-  font-weight: 440;
-  letter-spacing: -0.05em;
-}
-.quote-title > span {
-  font-size: 13px;
-  align-self: flex-start;
-  margin-top: 2px;
-}
-.quote-steps {
-  margin: 30px 0 33px;
-  border: 0;
-  gap: 5px;
-}
-.quote-steps li {
-  padding-bottom: 18px;
-  border-bottom: 2px solid var(--line);
-}
-.quote-steps li.current,
-.quote-steps li.done {
-  border-color: var(--accent);
-}
-.quote-steps li.current:after {
-  display: none;
-}
-.quote-steps button {
-  font-size: 13px;
-  gap: 10px;
-  align-items: center;
-}
-.quote-steps button > span {
-  height: 27px;
-  width: 27px;
-  font-size: 11px;
-  border-radius: 3px;
-}
-.quote-steps .done button > span {
-  background: transparent;
-  color: var(--accent);
-  border-color: transparent;
-}
-.quote-steps button:disabled {
-  opacity: 1;
-  color: var(--muted);
-}
-.quote-step-body {
-  min-height: 340px;
-}
-.quote-step-body > h3 {
-  font-size: 23px;
-  letter-spacing: -0.04em;
-  line-height: 1.3;
-  margin-bottom: 25px;
-}
-.quote-services {
-  gap: 12px;
-}
-.quote-services button {
-  padding: 14px;
-  position: relative;
-  min-height: 110px;
-  gap: 13px;
-  background: var(--bg);
-  border-color: var(--line);
-  border-radius: 4px;
-  font-size: 15px;
-  overflow: hidden;
-}
-.quote-services button[aria-pressed="true"] {
-  box-shadow: inset 0 0 0 1px var(--accent);
-  border-color: var(--accent);
-  background: var(--soft-accent);
-}
-.quote-services button > svg:first-of-type {
-  display: none;
-}
-.quote-services button > .service-visual {
-  margin: 0;
-  width: 78px;
-  height: 69px;
-  flex-shrink: 0;
-  border: 0;
-  border-radius: 3px;
-  pointer-events: none;
-}
-.quote-services .service-visual-piece {
-  width: 120%;
-  left: -10%;
-  top: 3%;
-  box-shadow: none;
-}
-.quote-services button > span {
-  position: relative;
-  z-index: 2;
-  line-height: 1.35;
-}
-.quote-services button > svg:last-child {
-  color: var(--accent);
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  right: 9px;
-  top: 9px;
-}
-.quote-navigation {
-  padding-top: 26px;
-  margin-top: 30px;
-}
-.quote-navigation .form-note {
-  font-size: 12px;
-  max-width: 240px;
-}
-.quote-navigation .button {
-  font-size: 14px;
-}
-.quote-sidebar {
-  top: 103px;
-}
-.estimate-card {
-  background: #c5b7ef;
-  border: 0;
-  color: #30273f;
-  border-radius: 5px;
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--card-shadow);
-}
-:root[data-theme="light"] .estimate-card {
-  background: #e0d6f3;
-  box-shadow: 0 12px 30px #6a48a312;
-}
-.estimate-card:after {
-  content: "";
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  border: 1px solid #54426725;
-  border-radius: 50%;
-  right: -65px;
-  top: -45px;
-  pointer-events: none;
-}
-.estimate-card .eyebrow {
-  font-size: 10px;
-  color: #4f4165;
-  letter-spacing: 0.08em;
-}
-.estimate-card .status-dot {
-  background: #6b4fab;
-  box-shadow: none;
-}
-.estimate-card h3 {
-  font-size: 19px;
-  margin-top: 30px;
-  line-height: 1.3;
-  font-weight: 450;
-}
-.estimate-value {
-  font-size: clamp(28px, 2.25vw, 38px);
-  line-height: 1.15;
-  font-weight: 450;
-  letter-spacing: -0.055em;
-  margin-top: 14px;
-}
-.estimate-card p {
-  color: #584c68;
-  font-size: 13px;
-  line-height: 1.75;
-  margin-top: 20px;
-}
-.estimate-divider {
-  background: #54426730;
-  margin-block: 24px;
-}
-.estimate-label {
-  color: #594a70;
-  font-size: 10px;
-}
-.estimate-card ul {
-  gap: 13px;
-  margin-bottom: 26px;
-}
-.estimate-card li {
-  font-size: 13px;
-  line-height: 1.5;
-}
-.estimate-card li > svg {
-  color: #644ba0;
 }
 .placeholder-price {
   color: #584c68;
@@ -1612,25 +1400,6 @@
   letter-spacing: -0.025em;
   line-height: 1.5;
   margin-bottom: 18px;
-}
-.contact-channels a,
-.contact-unconfigured {
-  padding-block: 18px;
-  font-size: 14px;
-  gap: 14px;
-}
-.contact-unconfigured small {
-  font-size: 11px;
-  letter-spacing: 0.01em;
-}
-.contact-unconfigured > svg,
-.contact-channels a > svg:first-child {
-  box-sizing: content-box;
-  padding: 9px;
-  background: var(--surface);
-  border-radius: 3px;
-  width: 16px;
-  height: 16px;
 }
 .selected-service {
   border-left: 2px solid var(--accent);
@@ -1720,21 +1489,6 @@ legend {
   font-size: 13px;
   padding: 20px;
   border-radius: 4px;
-}
-.quote-complete {
-  gap: 25px;
-  padding: 10px 0;
-}
-.quote-complete h2 {
-  font-size: 47px;
-  font-weight: 420;
-  letter-spacing: -0.05em;
-}
-.quote-complete p {
-  font-size: 16px;
-}
-.quote-complete .text-link {
-  font-size: 14px;
 }
 @media (min-width: 1750px) {
   .hero {
@@ -1870,14 +1624,8 @@ legend {
     grid-template-columns: 50px 1fr;
     gap: 10px 15px;
   }
-  .price-card {
-    padding: 24px;
-  }
   .price-top h3 {
     font-size: 19px;
-  }
-  .price-card li {
-    font-size: 13px;
   }
   .showcase-stage {
     height: 510px;
@@ -1897,48 +1645,9 @@ legend {
     width: 25px;
     height: 15px;
   }
-  .quote-layout {
-    grid-template-columns: minmax(0, 1fr) 305px;
-    gap: 26px;
-  }
-  .quote-main {
-    padding: 27px;
-  }
-  .quote-title h2 {
-    font-size: 28px;
-  }
-  .quote-title > span {
-    font-size: 11px;
-  }
-  .quote-steps button {
-    font-size: 12px;
-    gap: 7px;
-  }
-  .quote-services button {
-    padding: 11px;
-    gap: 10px;
-    font-size: 13px;
-    min-height: 100px;
-  }
-  .quote-services button > .service-visual {
-    width: 60px;
-    height: 58px;
-  }
-  .estimate-card {
-    padding: 24px;
-  }
-  .estimate-value {
-    font-size: 28px;
-  }
-  .estimate-card .eyebrow {
-    font-size: 9px;
-  }
   .scope-options label {
     font-size: 13px;
     padding: 14px;
-  }
-  .quote-step-body > h3 {
-    font-size: 22px;
   }
   .dialog-footer {
     display: block;
@@ -2006,37 +1715,8 @@ legend {
   .hero-artly svg {
     margin-left: 0.15em;
   }
-  .quote-layout {
-    grid-template-columns: minmax(0, 1fr) 270px;
-    gap: 20px;
-  }
-  .quote-main {
-    padding: 22px;
-  }
-  .quote-title h2 {
-    font-size: 23px;
-  }
-  .quote-services button > .service-visual {
-    width: 50px;
-    height: 50px;
-  }
-  .quote-services button {
-    font-size: 12px;
-    gap: 8px;
-  }
-  .quote-steps button {
-    font-size: 11px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .estimate-value {
-    font-size: 25px;
-  }
   .scope-options {
     grid-template-columns: 1fr;
-  }
-  .quote-services {
-    grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 800px) {
@@ -2296,32 +1976,12 @@ legend {
     font-size: 15px;
     max-width: 100%;
   }
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-  .price-card {
-    padding: 32px;
-  }
   .price-top h3 {
     font-size: 24px;
-  }
-  .price-card ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px 30px;
-  }
-  .price-card li {
-    font-size: 14px;
-  }
-  .price-card .button {
-    max-width: 320px;
   }
   .price {
     margin-block: 25px;
     font-size: 55px;
-  }
-  .pricing-note {
-    gap: 20px;
   }
   .cta-section {
     padding-block: 90px 65px;
@@ -2530,43 +2190,6 @@ legend {
   .dialog-inner h2 {
     font-size: 55px;
   }
-  .quote-layout {
-    grid-template-columns: 1fr;
-    gap: 26px;
-  }
-  .quote-main {
-    padding: 30px;
-  }
-  .quote-title h2 {
-    font-size: 31px;
-  }
-  .quote-steps button {
-    font-size: 13px;
-    flex-direction: row;
-    align-items: center;
-  }
-  .quote-services button {
-    font-size: 15px;
-    min-height: 106px;
-    padding: 16px;
-    gap: 16px;
-  }
-  .quote-services button > .service-visual {
-    width: 80px;
-    height: 67px;
-  }
-  .quote-sidebar {
-    position: static;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-  }
-  .estimate-card {
-    padding: 25px;
-  }
-  .estimate-value {
-    font-size: 30px;
-  }
   .contact-channels {
     margin-top: 0;
   }
@@ -2575,12 +2198,6 @@ legend {
   }
   .field {
     font-size: 14px;
-  }
-  .quote-step-body > h3 {
-    font-size: 24px;
-  }
-  .quote-complete h2 {
-    font-size: 44px;
   }
 }
 @media (max-width: 540px) {
@@ -2929,12 +2546,6 @@ legend {
     font-size: 14px;
     line-height: 1.75;
   }
-  .pricing-section {
-    padding-top: 75px;
-  }
-  .price-card {
-    padding: 26px;
-  }
   .price-top h3 {
     font-size: 23px;
   }
@@ -2944,34 +2555,12 @@ legend {
     text-align: center;
     line-height: 1.5;
   }
-  .price-card > p {
-    font-size: 14px;
-  }
   .price {
     font-size: 53px;
     margin-block: 28px;
   }
   .price small {
     font-size: 12px;
-  }
-  .price-card ul {
-    display: grid;
-    gap: 16px;
-    padding-block: 23px 28px;
-  }
-  .price-card li {
-    font-size: 14px;
-  }
-  .price-card .button {
-    font-size: 13px;
-    max-width: none;
-  }
-  .pricing-note p {
-    font-size: 12px;
-  }
-  .pricing-note a {
-    font-size: 13px;
-    max-width: none;
   }
   .cta-section {
     padding-block: 75px 55px;
@@ -3422,153 +3011,9 @@ legend {
   .contact-intro {
     padding-bottom: 33px;
   }
-  .quote-layout {
-    gap: 24px;
-    padding-bottom: 65px;
-  }
-  .quote-main {
-    padding: 24px 18px;
-    box-shadow: none;
-  }
   .builder-kicker {
     font-size: 9px;
     margin-bottom: 13px;
-  }
-  .quote-title {
-    gap: 15px;
-    align-items: start;
-  }
-  .quote-title h2 {
-    font-size: 27px;
-    line-height: 1.08;
-    max-width: 240px;
-  }
-  .quote-title > span {
-    font-size: 10px;
-    margin-top: 1px;
-  }
-  .quote-steps {
-    gap: 7px;
-    margin: 25px 0 28px;
-  }
-  .quote-steps li {
-    padding-bottom: 14px;
-  }
-  .quote-steps button {
-    font-size: 11px;
-    gap: 9px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .quote-steps button > span {
-    width: 26px;
-    height: 26px;
-    font-size: 10px;
-  }
-  .quote-step-body > h3 {
-    font-size: 23px;
-    line-height: 1.25;
-    letter-spacing: -0.04em;
-    margin-bottom: 23px;
-  }
-  .quote-services {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .quote-services button {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 153px;
-    padding: 11px;
-    gap: 12px;
-    overflow: hidden;
-  }
-  .quote-services button > .service-visual {
-    width: 100%;
-    height: 76px;
-    margin: 0;
-    border-radius: 2px;
-    flex-basis: auto;
-  }
-  .quote-services .service-visual-piece {
-    width: 85%;
-    left: 7%;
-    top: 2%;
-  }
-  .quote-services button > span {
-    font-size: 13px;
-    line-height: 1.35;
-    flex-basis: auto;
-    max-width: 100%;
-    font-weight: 450;
-  }
-  .quote-services button > svg:last-child {
-    display: block !important;
-    right: 7px;
-    top: 7px;
-    background: var(--accent);
-    color: var(--bg);
-    border-radius: 50%;
-    padding: 3px;
-    box-sizing: content-box;
-    width: 12px;
-    height: 12px;
-  }
-  .quote-navigation {
-    gap: 13px;
-    padding-top: 23px;
-    margin-top: 28px;
-  }
-  .quote-navigation .form-note {
-    max-width: 125px;
-    font-size: 11px;
-  }
-  .quote-navigation .button {
-    padding: 14px;
-    font-size: 12px;
-    gap: 10px;
-    min-height: 50px;
-  }
-  .quote-navigation .button > svg {
-    padding-left: 9px;
-    width: 16px;
-    height: 16px;
-  }
-  .quote-navigation > .text-link {
-    font-size: 13px;
-    gap: 8px;
-  }
-  .quote-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    position: static;
-  }
-  .estimate-card {
-    padding: 27px;
-    box-shadow: none;
-  }
-  .estimate-card .eyebrow {
-    font-size: 10px;
-    letter-spacing: 0.06em;
-    line-height: 1.7;
-  }
-  .estimate-value {
-    font-size: 36px;
-  }
-  .estimate-card h3 {
-    font-size: 20px;
-  }
-  .estimate-card p {
-    font-size: 14px;
-    line-height: 1.75;
-  }
-  .estimate-label {
-    font-size: 10px;
-  }
-  .estimate-card li {
-    font-size: 14px;
   }
   .placeholder-price {
     font-size: 11px;
@@ -3577,13 +3022,6 @@ legend {
     font-size: 17px;
     max-width: 300px;
     line-height: 1.5;
-  }
-  .contact-channels a,
-  .contact-unconfigured {
-    font-size: 14px;
-  }
-  .contact-unconfigured small {
-    font-size: 12px;
   }
   .selected-service {
     font-size: 14px;
@@ -3673,25 +3111,6 @@ legend {
     line-height: 1.8;
     padding: 18px;
   }
-  .quote-complete {
-    padding: 4px 0;
-    gap: 24px;
-  }
-  .quote-complete h2 {
-    font-size: 38px;
-    line-height: 1.1;
-  }
-  .quote-complete p {
-    font-size: 15px;
-  }
-  .quote-complete .button {
-    font-size: 13px;
-    gap: 18px;
-    padding: 15px 17px;
-  }
-  .quote-complete .text-link {
-    font-size: 13px;
-  }
   .complete-icon {
     width: 60px;
     height: 60px;
@@ -3752,36 +3171,8 @@ legend {
   .showcase-stage {
     height: 310px;
   }
-  .quote-main {
-    padding-inline: 15px;
-  }
-  .quote-title h2 {
-    font-size: 25px;
-  }
-  .quote-services button {
-    padding: 10px;
-  }
-  .quote-services button > span {
-    font-size: 12px;
-  }
-  .estimate-value {
-    font-size: 32px;
-  }
-  .quote-steps button {
-    font-size: 10px;
-  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .page-transition,
-  .hero-canvas,
-  .studio-composition,
-  .studio-composition > div,
-  .quote-step-body,
-  .estimate-value {
-    opacity: 1 !important;
-    transform: none !important;
-  }
   .showcase-browser {
     transform: none !important;
   }

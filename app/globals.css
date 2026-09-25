@@ -1214,23 +1214,6 @@ svg {
   margin-top: 13px;
   max-width: 240px;
 }
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-.price-card {
-  border: 1px solid var(--line);
-  padding: 28px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  background: var(--surface);
-}
-.price-card.featured {
-  border-color: #6d5eac;
-  background: linear-gradient(145deg, #7962ec12, var(--surface) 70%);
-}
 .price-top {
   display: flex;
   justify-content: space-between;
@@ -1249,11 +1232,6 @@ svg {
   padding: 6px;
   border-radius: 4px;
 }
-.price-card > p {
-  font-size: 13px;
-  color: var(--muted);
-  margin-top: 12px;
-}
 .price {
   font-size: 42px;
   letter-spacing: -2px;
@@ -1263,49 +1241,6 @@ svg {
   font-size: 12px;
   color: var(--muted);
   letter-spacing: 0;
-}
-.price-card ul {
-  list-style: none;
-  padding: 23px 0 28px;
-  margin: 0;
-  border-top: 1px solid var(--line);
-  display: grid;
-  gap: 15px;
-}
-.price-card li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
-  color: var(--muted);
-}
-.price-card li svg {
-  color: var(--accent);
-}
-.price-card .button {
-  margin-top: auto;
-  width: 100%;
-  font-size: 12px;
-}
-.pricing-note {
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-  margin-top: 25px;
-}
-.pricing-note p {
-  font-size: 11px;
-  line-height: 1.8;
-  color: var(--muted);
-  max-width: 540px;
-}
-.pricing-note a {
-  font-size: 12px;
-  line-height: 1.8;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  max-width: 330px;
 }
 .cta-section {
   padding-block: 110px;
@@ -1943,195 +1878,10 @@ svg {
 .not-found .button {
   margin-top: 30px;
 }
-.quote-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
-  gap: 40px;
-  padding-bottom: 110px;
-  align-items: start;
-}
-.quote-main {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--surface);
-  padding: 32px;
-}
-.quote-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.quote-title h2 {
-  font-size: 25px;
-  letter-spacing: -0.9px;
-  font-weight: 500;
-}
-.quote-title > span {
-  font: 11px var(--font-mono);
-  color: var(--muted);
-  white-space: nowrap;
-}
-.quote-steps {
-  display: flex;
-  list-style: none;
-  margin: 27px 0 34px;
-  padding: 0;
-  border-bottom: 1px solid var(--line);
-}
-.quote-steps li {
-  flex: 1;
-  padding-bottom: 20px;
-  position: relative;
-}
-.quote-steps li.current:after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--accent);
-}
-.quote-steps button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  padding: 0;
-}
-.quote-steps button > span {
-  width: 23px;
-  height: 23px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font: 10px var(--font-mono);
-}
-.quote-steps .current button > span,
-.quote-steps .done button > span {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--bg);
-}
-.quote-step-body {
-  min-height: 350px;
-}
-.quote-step-body > h3 {
-  font-size: 21px;
-  letter-spacing: -0.6px;
-  font-weight: 450;
-  margin-bottom: 25px;
-  outline: none;
-}
-.quote-services {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-.quote-services button {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  min-height: 77px;
-  text-align: left;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 16px;
-  font-size: 13px;
-  transition:
-    border-color 0.2s,
-    background 0.2s;
-}
-.quote-services button > svg:first-child {
-  color: var(--accent);
-}
-.quote-services button > span {
-  flex: 1;
-}
-.quote-services button[aria-pressed="true"] {
-  border-color: var(--accent);
-  background: #a193fa0b;
-}
-.quote-services button:hover {
-  background: var(--raised);
-}
-.quote-navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  border-top: 1px solid var(--line);
-  padding-top: 25px;
-  margin-top: 30px;
-}
-.quote-navigation .button {
-  font-size: 13px;
-}
 .form-note {
   font-size: 11px;
   color: var(--muted);
   line-height: 1.8;
-}
-.quote-sidebar {
-  position: sticky;
-  top: 120px;
-}
-.estimate-card {
-  border: 1px solid #a193fa50;
-  padding: 28px;
-  border-radius: 10px;
-  background: linear-gradient(145deg, #a193fa0b, transparent);
-}
-.estimate-card .eyebrow {
-  font-size: 8px;
-  letter-spacing: 1px;
-}
-.estimate-card h3 {
-  font-size: 17px;
-  font-weight: 450;
-  margin-top: 27px;
-}
-.estimate-value {
-  font-size: 32px;
-  font-weight: 500;
-  letter-spacing: -1.5px;
-  display: block;
-  margin-top: 10px;
-}
-.estimate-card p {
-  font-size: 12px;
-  line-height: 1.8;
-  color: var(--muted);
-  margin-top: 15px;
-}
-.estimate-divider {
-  height: 1px;
-  background: var(--line);
-  margin-block: 25px;
-}
-.estimate-label {
-  font: 9px var(--font-mono);
-  letter-spacing: 1px;
-  color: var(--muted);
-}
-.estimate-card ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  gap: 13px;
-  margin-top: 17px;
-  margin-bottom: 24px;
-}
-.estimate-card li {
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-.estimate-card li > svg {
-  color: var(--accent);
 }
 .placeholder-price {
   font-size: 10px;
@@ -2149,25 +1899,8 @@ svg {
   font-weight: 450;
   margin-bottom: 18px;
 }
-.contact-channels a,
-.contact-unconfigured {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-bottom: 1px solid var(--line);
-  padding: 16px 0;
-  font-size: 13px;
-}
 .contact-channels a > svg:last-child {
   margin-left: auto;
-}
-.contact-unconfigured > small {
-  margin-left: auto;
-  color: var(--muted);
-  font-size: 10px;
-}
-.contact-unconfigured > svg {
-  color: var(--muted);
 }
 .selected-service {
   display: flex;
@@ -2335,13 +2068,6 @@ input[type="checkbox"] {
   border-radius: 5px;
   margin-top: 24px;
 }
-.quote-complete {
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 25px;
-}
 .complete-icon {
   display: grid;
   place-items: center;
@@ -2351,29 +2077,12 @@ input[type="checkbox"] {
   color: var(--accent);
   border-radius: 50%;
 }
-.quote-complete h2 {
-  font-size: 40px;
-  font-weight: 450;
-  line-height: 1.15;
-  letter-spacing: -1.5px;
-}
-.quote-complete p {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.8;
-}
-.quote-complete .text-link {
-  font-size: 13px;
-}
 @media (max-width: 1100px) {
   .service-grid {
     grid-template-columns: 1fr 1fr;
   }
   .service-card-top {
     margin-bottom: 30px;
-  }
-  .price-card {
-    padding: 23px;
   }
   .price-top > span {
     display: none;
@@ -2393,31 +2102,6 @@ input[type="checkbox"] {
   }
   .service-detail-intro {
     gap: 50px;
-  }
-  .quote-layout {
-    grid-template-columns: minmax(0, 1fr) 290px;
-    gap: 25px;
-  }
-  .quote-main {
-    padding: 24px;
-  }
-  .estimate-card {
-    padding: 22px;
-  }
-  .estimate-value {
-    font-size: 27px;
-  }
-  .quote-steps button {
-    font-size: 10px;
-    gap: 5px;
-  }
-  .quote-title h2 {
-    font-size: 21px;
-  }
-  .quote-services button {
-    font-size: 12px;
-    padding: 13px;
-    gap: 10px;
   }
   .project-card-art {
     padding: 50px 18px 30px;
@@ -2457,24 +2141,11 @@ input[type="checkbox"] {
     grid-template-columns: 1fr 1fr;
     row-gap: 35px;
   }
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
   .price-top > span {
     display: block;
   }
-  .price-card {
-    padding: 28px;
-  }
-  .price-card ul {
-    padding-top: 20px;
-  }
   .price {
     margin: 25px 0;
-  }
-  .pricing-note {
-    flex-direction: column;
-    gap: 15px;
   }
   .cta-inner {
     padding: 35px;
@@ -2555,29 +2226,8 @@ input[type="checkbox"] {
   .detail-actions {
     margin-top: 25px;
   }
-  .quote-layout {
-    grid-template-columns: 1fr;
-  }
-  .quote-sidebar {
-    position: static;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-  }
   .contact-channels {
     margin-top: 0;
-  }
-  .quote-services button {
-    min-height: 78px;
-  }
-  .quote-title h2 {
-    font-size: 25px;
-  }
-  .quote-steps button {
-    font-size: 12px;
-  }
-  .estimate-value {
-    font-size: 29px;
   }
 }
 @media (max-width: 480px) {
@@ -2662,9 +2312,6 @@ input[type="checkbox"] {
     font-size: 12px;
   }
   .process-number {
-    font-size: 11px;
-  }
-  .pricing-note p {
     font-size: 11px;
   }
   .cta-section {
@@ -2918,78 +2565,8 @@ input[type="checkbox"] {
   .collection-card .mock-headline {
     font-size: 27px;
   }
-  .quote-layout {
-    padding-bottom: 65px;
-    gap: 25px;
-  }
-  .quote-main {
-    padding: 22px 17px;
-  }
-  .quote-title h2 {
-    font-size: 22px;
-  }
-  .quote-title > span {
-    font-size: 9px;
-  }
-  .quote-steps {
-    margin: 25px 0;
-  }
-  .quote-steps button {
-    font-size: 10px;
-    gap: 5px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .quote-steps li {
-    padding-bottom: 15px;
-  }
-  .quote-step-body > h3 {
-    font-size: 19px;
-  }
-  .quote-services {
-    gap: 9px;
-  }
-  .quote-services button {
-    padding: 14px 10px;
-    font-size: 11px;
-    gap: 8px;
-    min-height: 85px;
-    flex-wrap: wrap;
-  }
-  .quote-services button > svg:first-child {
-    width: 19px;
-    height: 19px;
-  }
-  .quote-services button > span {
-    flex-basis: 70%;
-    line-height: 1.5;
-  }
-  .quote-services button > svg:last-child:not(:first-child) {
-    display: none;
-  }
-  .quote-navigation .form-note {
-    font-size: 10px;
-    max-width: 110px;
-  }
-  .quote-navigation .button {
-    padding: 14px;
-    font-size: 11px;
-    gap: 10px;
-  }
-  .quote-sidebar {
-    grid-template-columns: 1fr;
-  }
   .contact-channels {
     margin-top: 5px;
-  }
-  .estimate-card {
-    padding: 25px;
-  }
-  .estimate-value {
-    font-size: 34px;
-  }
-  .estimate-card .eyebrow {
-    font-size: 9px;
   }
   .scope-options {
     grid-template-columns: 1fr;
@@ -3021,12 +2598,6 @@ input[type="checkbox"] {
   }
   .review dt {
     flex-shrink: 1;
-  }
-  .quote-complete h2 {
-    font-size: 33px;
-  }
-  .quote-complete p {
-    font-size: 14px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

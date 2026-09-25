@@ -19,3 +19,12 @@ Photography licensed under the [Unsplash License](https://unsplash.com/license).
 - **beauty.webp** — [kimia kazemi](https://unsplash.com/photos/a-person-receiving-a-facial-treatment-RbIcMsh0NSk)
 - **fitness.webp** — [Scott Webb](https://unsplash.com/photos/woman-on-gym-equipment-xwMlVSqP20U)
 - **beauty-mask.webp** — [Ernesto Samaniego](https://unsplash.com/photos/beauty-professional-applies-a-soothing-facial-mask-NEHSvwdNPvQ)
+
+## Original Artly concept images
+
+Created for this project with OpenAI image generation in 2026. These text-free images are fictional portfolio concepts.
+
+- **headphones.webp** — premium headphones in a cobalt-and-lime studio
+- **florist.webp** — a hand-tied bouquet in a naturally lit florist studio
+- **nightlife.webp** — an intimate Prishtina-inspired nightlife scene
+- **cycling.webp** — urban cyclists at sunrise in a Kosovo-inspired city
