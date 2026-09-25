@@ -1,25 +1,35 @@
 {
-  "name": "artly-",
+  "name": "artly",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "artwork:capture": "node scripts/capture-showcase.mjs",
+    "artwork:logos": "node scripts/create-curated-logos.mjs",
+    "artwork:case-logos": "node scripts/create-logos.mjs",
+    "artwork:graphic": "node scripts/capture-curated.mjs"
   },
   "dependencies": {
+    "framer-motion": "^13.2.0",
+    "lucide-react": "^1.43.0",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@playwright/cli": "^0.1.19",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.4",
+    "opentype.js": "^2.0.0",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

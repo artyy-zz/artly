@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Artly
 
-## Getting Started
+A bilingual creative studio website built with Next.js 16.3.4, App Router, React 19, TypeScript, Tailwind CSS 4, Framer Motion, and Lucide React.
 
-First, run the development server:
+## Run locally
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. For production, run `npm run build` then `npm start`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm run lint
+npm run typecheck
+npm run build
+```
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+- `app/`: home, services, four statically generated service routes, portfolio, contact, and localized not-found page.
+- `components/`: shared shell, theme/language provider, reveal/button primitives, asset-backed artwork previews, project dialogs, and page components.
+- `lib/content.ts`: bilingual service/project data, package starting prices, contact destinations, and estimator rates.
+- `lib/catalogue.ts`: curated collection membership; every entry points to a real concept and asset.
+- `lib/estimator.ts`: service-specific scope choices and a pure estimate function.
+- `app/globals.css`: light/dark design tokens, responsive layouts, mockup styles, and reduced-motion rules; Tailwind utilities are also available.
+- `components/showcase/`: 12 complete Albanian concept websites and social, print, and branding artboard layouts.
+- `lib/showcase-data.json`: 16 fictional brand identities and their available deliverables.
+- `app/artwork-display.css`: image proportions and gallery/case-study presentation.
+- `app/showcase.css` and `app/artwork-designs.css`: responsive demo websites and printable artboards.
+- `app/refinements.css`: studio typography, editorial layouts, service previews, portfolio art direction, quote presentation, and responsive refinements, layered after the base styles.
+- `lib/use-reduced-motion.ts`: hydration-safe motion preference subscription; CSS also respects reduced motion before hydration.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Text uses typed `c(albanian, english)` pairs and the shared `t()` function. Albanian and dark mode are the defaults. Language and theme are saved locally, with an in-memory fallback when browser storage is unavailable.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Editing content
 
-## Deploy on Vercel
+Add portfolio entries in `lib/curated.ts`, extend collections in `lib/catalogue.ts`, and adjust service prices and `pricing` values in `lib/content.ts`. Scope-specific surcharges are in `lib/estimator.ts`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Set the studio's verified Instagram URL, WhatsApp URL (for example a valid `https://wa.me/...` destination), and email in `contactDetails`. These are deliberately unset and shown as coming soon until real details are provided.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All visual projects are fictional Artly concepts. Designs are authored in HTML/CSS and SVG; finished artwork is stored locally as WebP and SVG. Photography comes from the credited sources in `public/artwork/PHOTO-CREDITS.md`. Fonts are downloaded at build time by `next/font` and served locally by Next.js.
+
+## Quote flow
+
+Choose a service, configure its scope, enter contact details, review, and finish the demo. Estimates update immediately; website estimates include pages above five and selected extras. Social management estimates are monthly. Prices are illustrative and custom requirements need separate review.
+
+The form sends no network request and saves no personal data to browser storage. The final screen downloads a text brief on request. Reloading or leaving the contact page clears the draft. Only language and theme persist.
+
+## Before public launch
+
+- Set verified contact destinations and approved package prices.
+- Replace or retain the clearly labeled concept projects as desired.
+- Connect form delivery when ready; the current implementation is intentionally a frontend demonstration.
+- Deploy the application to a compatible Next.js host.
+
+No authentication, database, payment system, or submission backend is included.
+
+## Curated galleries
+
+The four services are Websites, Logo Design, Social Media Management and Graphic Design (Dizajn grafik). The quote form also offers Tjetër / Other for custom projects, with individual pricing and a working local brief flow. The graphic quote has five scopes: social posts, flyer/poster, menu, promotional material and other visual design.
+
+- 12 full responsive websites, using 36 actual desktop, mobile and full-page screenshots.
+- 12 logo-only clients in lib/logo-collection.json: editorial, geometric, organic seal, performance, script, pixel-tech, hospitality emblem, corporate, playful, bakery, photography monogram and minimal hotel directions. SVG lettering is outlined; each has primary, mark, dark, light and presentation variants.
+- 18 graphic clients: 6 social posts, 4 posters, 4 menus and 4 business/promotional pieces.
+- 3 separate management clients with finished posts and publication plans.
+- 45 distinct fictional businesses across the four browsing galleries, with no client overlap. The portfolio curates 7 entries from those galleries; the homepage retains 3 website-led case studies.
+
+Membership is explicit in lib/catalogue.ts. New graphics live in lib/graphic-collection.json and components/showcase/graphic-work.tsx, styled by app/curated-art.css. Four restaurant menus and website case-study applications retain their existing source data in lib/showcase-data.json. Identity boards remain available within case studies at /showcase/[slug]/identity; they are not a service.
+
+Former service slugs branding, social-design, flyers-posters, menus and creative-design now return 404. The six old cross-category management campaign pages and assets were retired. Unused service options and collection exports were removed.
+
+### Recreate assets
+
+With a local server running:
+
+- npm run artwork:logos — current independent logo collection.
+- npm run artwork:graphic — current graphic and management boards.
+- npm run artwork:case-logos — retained website/case-study identities.
+- npm run artwork:capture — website screenshots and retained case-study applications.
+
+ARTLY_CAPTURE_URL selects the local origin. ARTLY_CAPTURE_ONLY optionally selects one client. Fonts for logo generation are read from Windows Fonts, or ARTLY_FONT_DIR; the finished outlined SVGs require no font installation in production. Photography is stored locally with credits in public/artwork/PHOTO-CREDITS.md. Capture scripts update the content hash manifest so galleries receive refreshed images.
+
+All clients, offers, plans and contact examples are fictional Artly concepts. Concept contact forms acknowledge locally; no request is sent. Retired assets are kept outside public in ignored output/retired-artwork.

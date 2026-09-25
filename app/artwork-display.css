@@ -1,0 +1,182 @@
+/* Artwork keeps the proportions of the actual captured design. */
+.mockup.artwork-preview {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  min-height: 0;
+  overflow: hidden;
+  aspect-ratio: 1440/1050;
+  border-radius: 3px;
+  container-type: normal;
+}
+.mockup.artwork-preview > img {
+  object-fit: contain;
+  object-position: center;
+}
+.mockup.artwork-preview.variant-logo {
+  aspect-ratio: 640/360;
+}
+.mockup.artwork-preview.variant-branding {
+  aspect-ratio: 1600/1100;
+}
+.mockup.artwork-preview.variant-social {
+  aspect-ratio: 4/5;
+}
+.mockup.artwork-preview.variant-menu,
+.mockup.artwork-preview.variant-poster {
+  aspect-ratio: 5/7;
+}
+.studio-web .artwork-preview {
+  aspect-ratio: 1440/1050;
+}
+.studio-identity .artwork-preview {
+  aspect-ratio: 1.28;
+}
+.studio-print .artwork-preview {
+  aspect-ratio: 4/5;
+}
+.studio-menu .artwork-preview {
+  aspect-ratio: 5/7;
+}
+.collection-card {
+  flex-basis: 420px;
+  align-self: start;
+}
+.collection-card.collection-social,
+.collection-card.collection-planner,
+.collection-card.collection-menu,
+.collection-card.collection-poster {
+  flex-basis: 280px;
+}
+.collection-card.collection-logo {
+  flex-basis: 360px;
+}
+.collection-card.collection-brand {
+  flex-basis: 460px;
+}
+.collection-card .artwork-preview {
+  border: 0;
+}
+.collection-card .collection-reveal {
+  bottom: 91px;
+}
+.collection-track {
+  align-items: flex-start;
+}
+.project-card-identity {
+  width: 34%;
+}
+.project-card-identity .artwork-preview {
+  aspect-ratio: 1.25;
+}
+.showcase-phone {
+  height: auto !important;
+  aspect-ratio: 4/5;
+  border-radius: 8px;
+  padding: 0;
+  overflow: hidden;
+}
+.showcase-phone:has(.variant-menu) {
+  aspect-ratio: 5/7;
+}
+.showcase-phone .phone-notch {
+  display: none;
+}
+.showcase-phone .artwork-preview {
+  height: 100%;
+}
+.showcase-browser .artwork-preview {
+  aspect-ratio: 1440/1050;
+}
+.showcase-brand .artwork-preview {
+  height: auto;
+}
+.detail-feature:has(.variant-social),
+.detail-feature:has(.variant-menu),
+.detail-feature:has(.variant-poster) {
+  max-width: 360px;
+  margin-inline: auto;
+}
+.detail-feature .artwork-preview {
+  box-shadow: 0 20px 50px #0003;
+}
+.dialog-inner > .artwork-preview {
+  margin-block: 26px;
+}
+.dialog-inner > .variant-social,
+.dialog-inner > .variant-menu,
+.dialog-inner > .variant-poster {
+  max-width: 610px;
+  margin-inline: auto;
+}
+.case-section {
+  margin: 38px 0;
+}
+.case-section h3 {
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+}
+.case-section p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+.case-section .dialog-grid {
+  align-items: start;
+}
+.case-caption {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 10px;
+}
+.case-website-link {
+  margin: 4px 0 28px;
+}
+@media (min-width: 900px) {
+  .showcase-brand:has(.variant-branding) {
+    width: 32%;
+  }
+  .project-dialog {
+    width: min(1080px, 92vw);
+  }
+}
+@media (max-width: 700px) {
+  .collection-card {
+    flex-basis: 82vw;
+  }
+  .collection-card.collection-social,
+  .collection-card.collection-planner,
+  .collection-card.collection-menu,
+  .collection-card.collection-poster {
+    flex-basis: 68vw;
+  }
+  .collection-card.collection-brand,
+  .collection-card.collection-logo {
+    flex-basis: 82vw;
+  }
+  .case-section {
+    margin-block: 26px;
+  }
+  .showcase-phone {
+    border-radius: 5px;
+  }
+  .dialog-inner {
+    padding: 26px 18px;
+  }
+}
+/* Gallery images are the exact finished artwork, without decorative stand-ins. */
+.mockup.artwork-preview.variant-website{aspect-ratio:1440/1100}.mockup.artwork-preview.variant-logo{aspect-ratio:3/2}.mockup.artwork-preview.variant-identity{aspect-ratio:640/240}.mockup.artwork-preview.variant-creative{aspect-ratio:1.45}.mockup.artwork-preview.variant-campaign{aspect-ratio:16/11}.mockup.artwork-preview.variant-website-mobile{aspect-ratio:390/844}.service-visual{height:240px;background:var(--surface);display:flex;align-items:center;justify-content:center}.service-visual .service-visual-piece{position:relative;left:auto;top:auto;width:92%;transform:none;box-shadow:none}.service-card:hover .service-visual-piece{transform:scale(1.025)}.visual-social-management .service-visual-piece{width:96%;left:auto;top:auto;transform:none}.visual-logo-design .service-visual-piece{width:92%;left:auto;top:auto}.collection-card.collection-campaign{flex-basis:480px}.collection-card.collection-creative{flex-basis:440px}.studio-identity .artwork-preview{aspect-ratio:1.4}.showcase-phone{aspect-ratio:390/844!important;width:15%;padding:0;border:3px solid #d7d7ce;border-radius:15px;box-shadow:0 20px 45px #0004;bottom:6%;right:7%}.showcase-phone .artwork-preview{aspect-ratio:390/844}.showcase-brand{width:34%;right:5%;top:8%;transform:rotate(5deg);box-shadow:0 15px 35px #0003}.showcase-browser{width:72%;left:5%;top:20%}.showcase-fashion .showcase-browser{width:63%;right:4%;left:auto;top:28%}.showcase-fashion .showcase-brand{left:4%;right:auto;top:10%;width:38%}.showcase-automotive .showcase-browser{width:71%;left:4%;right:auto;top:18%}.showcase-automotive .showcase-brand{right:4%;top:7%;width:35%}.showcase-beauty .showcase-stage{background:#dec2bb!important}.showcase-beauty .showcase-brand{left:5%;right:auto;top:7%}.showcase-beauty .showcase-browser{left:auto;right:5%;top:22%}.showcase-beauty .showcase-phone{right:auto;left:9%}.dialog-inner>.variant-campaign,.dialog-inner>.variant-creative{max-width:none}.case-section .variant-identity{max-width:600px;margin:auto}.project-card-identity .variant-identity{aspect-ratio:1.25}
+@media(max-width:700px){.service-visual{height:215px}.collection-card.collection-campaign,.collection-card.collection-creative{flex-basis:86vw}.showcase-phone{width:24%;border-width:1px;border-radius:6px;bottom:7%;right:5%}.showcase-browser,.showcase-fashion .showcase-browser,.showcase-automotive .showcase-browser{width:83%;left:4%;right:auto;top:23%}.showcase-brand,.showcase-fashion .showcase-brand,.showcase-automotive .showcase-brand{width:46%;left:auto;right:4%;top:7%}.showcase-beauty .showcase-brand{left:4%;right:auto}.showcase-beauty .showcase-phone{left:5%}.showcase-beauty .showcase-browser{right:4%;left:auto}}
+.case-capture-links{display:flex;gap:25px;flex-wrap:wrap;margin:20px 0 40px}.case-capture-links a{font-size:13px}
+/* Keep finished pieces entirely visible in service and selected-work previews. */
+.service-visual .service-visual-piece{position:relative!important;inset:auto!important;width:calc(100% - 32px)!important;height:calc(100% - 24px);transform:none!important;display:flex;align-items:center;justify-content:center}.service-visual .service-visual-piece .artwork-preview{width:100%;height:100%;aspect-ratio:auto!important;background:transparent!important;margin:0;transform:none}.service-visual .artwork-preview img{object-fit:contain!important}.selected-grid>div:not(:first-child) .project-card-mock{height:100%;width:100%;transform:none;margin:0;box-shadow:none}.selected-grid>div:not(:first-child) .project-card-mock .artwork-preview{height:100%;aspect-ratio:auto;background:transparent!important}.selected-grid>div:not(:first-child) .project-card-mock img{object-fit:contain}.selected-grid>div:not(:first-child) .project-card-art{padding:5% 8%}.showcase-stage .showcase-browser{height:75%;width:70%;top:17%;left:4%;right:auto}.showcase-stage .showcase-browser .artwork-preview{height:100%;aspect-ratio:auto;background:transparent!important}.showcase-stage .showcase-browser img{object-fit:contain}.showcase-reverse .showcase-stage .showcase-browser{left:auto;right:4%}
+
+/* Curated work keeps its original format in the portfolio. */
+.showcase-single .showcase-browser{inset:5%!important;width:90%!important;height:90%!important;transform:none!important}.showcase-single .showcase-browser .artwork-preview{width:100%;height:100%}.showcase-single .showcase-browser img{object-fit:contain!important;height:100%!important}.variant-logo-dark,.variant-logo-light{aspect-ratio:1.5}.variant-logo-dark img,.variant-logo-light img{object-fit:contain!important}
+
+.quote-services .quote-other{grid-column:1/-1;min-height:76px;flex-direction:row;align-items:center;gap:16px}.quote-services .quote-other>svg:first-of-type{display:block;width:23px;height:23px;flex-shrink:0}.quote-other small{font-size:13px;color:var(--muted);font-weight:400}.estimate-value.estimate-custom{font-size:clamp(22px,3vw,32px);line-height:1.2;letter-spacing:-.035em}

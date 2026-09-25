@@ -1,0 +1,122 @@
+[
+  {
+    "id": "albane",
+    "name": "Albanë",
+    "color": "#f0e7dc",
+    "ink": "#442b31",
+    "categorySq": "Modë editoriale",
+    "category": "Editorial fashion",
+    "sq": "Elegancë pa tepri.",
+    "line": "Elegance without excess."
+  },
+  {
+    "id": "kend",
+    "name": "Kënd",
+    "color": "#edeee9",
+    "ink": "#183e38",
+    "categorySq": "Arkitekturë",
+    "category": "Architecture",
+    "sq": "Perspektivë e qartë.",
+    "line": "A clear perspective."
+  },
+  {
+    "id": "rrenje",
+    "name": "Rrënjë",
+    "color": "#ece9cc",
+    "ink": "#465733",
+    "categorySq": "Produkte organike",
+    "category": "Organic produce",
+    "sq": "Nga toka jonë.",
+    "line": "From our soil."
+  },
+  {
+    "id": "turbo-88",
+    "name": "Turbo 88",
+    "color": "#fa4a24",
+    "ink": "#171717",
+    "categorySq": "Performancë auto",
+    "category": "Auto performance",
+    "sq": "Ritëm tjetër.",
+    "line": "Another pace."
+  },
+  {
+    "id": "lulea",
+    "name": "Lulea",
+    "color": "#f2d9dc",
+    "ink": "#773f56",
+    "categorySq": "Bukuri & kujdes",
+    "category": "Beauty & care",
+    "sq": "Me delikatesë.",
+    "line": "With delicacy."
+  },
+  {
+    "id": "kodik",
+    "name": "Kodik",
+    "color": "#151b42",
+    "ink": "#a7efda",
+    "categorySq": "Teknologji",
+    "category": "Technology",
+    "sq": "Logjikë. Lëvizje.",
+    "line": "Logic. Motion."
+  },
+  {
+    "id": "oda-vjeter",
+    "name": "Oda e Vjetër",
+    "color": "#e4ccb1",
+    "ink": "#6e382b",
+    "categorySq": "Mikpritje tradicionale",
+    "category": "Traditional hospitality",
+    "sq": "Në odën tonë.",
+    "line": "Welcome to our table."
+  },
+  {
+    "id": "siper",
+    "name": "Sipër",
+    "color": "#e4eaf0",
+    "ink": "#213d71",
+    "categorySq": "Inxhinieri",
+    "category": "Engineering",
+    "sq": "Mendojmë më lart.",
+    "line": "Thinking higher."
+  },
+  {
+    "id": "bubi",
+    "name": "Bubi",
+    "color": "#ffe584",
+    "ink": "#6642ba",
+    "categorySq": "Dyqan për fëmijë",
+    "category": "Children’s shop",
+    "sq": "Bota është për lojë.",
+    "line": "A world made for play."
+  },
+  {
+    "id": "embla",
+    "name": "Ëmbla",
+    "color": "#fff2df",
+    "ink": "#b3472d",
+    "categorySq": "Pastiçeri",
+    "category": "Patisserie",
+    "sq": "Pak ëmbëlsi çdo ditë.",
+    "line": "A little sweetness every day."
+  },
+  {
+    "id": "dritan-k",
+    "name": "Dritan K.",
+    "color": "#eae7e0",
+    "ink": "#222222",
+    "categorySq": "Fotografi",
+    "category": "Photography",
+    "sq": "Dritë në kujtesë.",
+    "line": "Light remembered."
+  },
+  {
+    "id": "lun",
+    "name": "LUN",
+    "color": "#dce2ed",
+    "ink": "#333e59",
+    "categorySq": "Hotel butik",
+    "category": "Boutique hotel",
+    "sq": "Qetësi e rrallë.",
+    "line": "Rare tranquillity."
+  }
+]
