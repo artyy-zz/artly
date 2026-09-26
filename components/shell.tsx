@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { useMotionValueEvent, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { ArrowUpRight, Asterisk, Menu, Moon, Sun, X } from "lucide-react";
 import { useSite } from "./providers";
 import { c, type Copy } from "@/lib/content";
@@ -20,6 +20,8 @@ export function Header() {
   );
   useEffect(() => {
     if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const close = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(false);
@@ -27,7 +29,10 @@ export function Header() {
       }
     };
     window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
+    return () => {
+      window.removeEventListener("keydown", close);
+      document.body.style.overflow = previousOverflow;
+    };
   }, [open]);
   const links = [
     ["/", c("Ballina", "Home")],
@@ -117,13 +122,19 @@ export function Header() {
             {open ? <X /> : <Menu />}
           </button>
         </div>
+        <AnimatePresence>
         {open && (
-          <nav
+          <motion.nav
             id="mobile-navigation"
             className="mobile-nav"
             aria-label={t(c("Navigimi kryesor", "Main navigation"))}
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
           >
-            {links.map(([href, label]) => (
+            <div className="mobile-nav-links">
+            {links.map(([href, label], index) => (
               <Link
                 href={href}
                 key={href}
@@ -134,15 +145,24 @@ export function Header() {
                 }
                 onClick={() => setOpen(false)}
               >
-                {t(label)}
+                <span>0{index + 1}</span>{t(label)}
                 <ArrowUpRight />
               </Link>
             ))}
+            </div>
+            <div className="mobile-nav-footer">
+              <div className="mobile-nav-settings">
+                <button aria-pressed={locale === "sq"} onClick={() => setLocale("sq")}>SQ</button>
+                <button aria-pressed={locale === "en"} onClick={() => setLocale("en")}>EN</button>
+                <button onClick={toggleTheme} aria-label={t(c("Ndrysho temën", "Change theme"))}>{theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}</button>
+              </div>
             <Button href="/contact" onClick={() => setOpen(false)}>
               {t(c("Na kontakto", "Contact us"))}
             </Button>
-          </nav>
+            </div>
+          </motion.nav>
         )}
+        </AnimatePresence>
       </header>
     </>
   );
@@ -190,18 +210,12 @@ export function AssistantButton() {
     ? [
         ["websites", c("Dua të jem online", "I want to get online")],
         ["logo-design", c("Dua një logo të re", "I need a new logo")],
-        [
-          "social-management",
-          c("Dua prezencë të rregullt", "I want a consistent presence"),
-        ],
+        ["graphic-design", c("Dua prezencë të rregullt", "I want a consistent presence")],
       ]
     : [
         ["websites", c("Dua një website", "I want a website")],
         ["graphic-design", c("Dua dizajn grafik", "I need graphic design")],
-        [
-          "social-management",
-          c("Menaxhim social media", "Social media management"),
-        ],
+        ["logo-design", c("Dua një logo", "I need a logo")],
       ];
   return (
     <div className="assistant">

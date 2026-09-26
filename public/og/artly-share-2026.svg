@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Artly — Studio kreativ digjital</title>
+  <desc id="desc">Website, logo, dizajn grafik dhe social media</desc>
+  <defs>
+    <radialGradient id="glow" cx="75%" cy="42%" r="60%">
+      <stop offset="0" stop-color="#8066eb" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#101112" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#c0b3ff"/>
+      <stop offset="1" stop-color="#765de5"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#101112"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="680" width="520" height="630" fill="url(#grid)"/>
+  <path d="M1010 82h108v108" fill="none" stroke="#b0a0f6" stroke-width="2"/>
+  <circle cx="967" cy="350" r="174" fill="none" stroke="#b0a0f6" stroke-opacity=".34"/>
+  <circle cx="967" cy="350" r="112" fill="url(#violet)" opacity=".95"/>
+  <path d="M924 348l29 29 60-65" fill="none" stroke="#f8f6ff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="76" y="89" fill="#b0a0f6" font-family="Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="4">STUDIO KREATIV DIGJITAL</text>
+  <text x="70" y="298" fill="#f5f3f0" font-family="Arial, sans-serif" font-size="178" font-weight="750" letter-spacing="-12">artly.</text>
+  <line x1="76" y1="357" x2="597" y2="357" stroke="#fff" stroke-opacity=".18"/>
+  <text x="76" y="420" fill="#d4d0dc" font-family="Arial, sans-serif" font-size="26" letter-spacing=".4">Website · Logo · Dizajn grafik · Social media</text>
+  <text x="76" y="551" fill="#f5f3f0" font-family="Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="1">artlymade.com</text>
+  <text x="1082" y="559" fill="#b0a0f6" font-family="Arial, sans-serif" font-size="14" text-anchor="end" letter-spacing="2">KOSOVË → KUDO</text>
+</svg>

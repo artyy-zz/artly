@@ -1,5 +1,6 @@
 import { Contact } from "@/components/contact";
-export const metadata = { title: "Kontakt" };
+import { pageMetadata } from "@/lib/metadata";
+export const metadata = pageMetadata({ title: "Kontakt", description: "Kontakto Artly direkt me telefon, WhatsApp ose Viber.", path: "/contact" });
 export default function Page() {
   return <Contact />;
 }

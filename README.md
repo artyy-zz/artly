@@ -60,7 +60,7 @@ No authentication, database, payment system, or submission backend is included.
 
 ## Curated galleries
 
-The four services are Websites, Logo Design, Social Media Management and Graphic Design (Dizajn grafik). The contact form also offers Tjetër / Other for conversations outside those services.
+The three services are Websites, Logo Design, and Graphic Design & Social Media. Contact is available directly by phone, WhatsApp, and Viber.
 
 - 12 full responsive websites, using 36 actual desktop, mobile and full-page screenshots.
 - 12 logo-only clients in lib/logo-collection.json: editorial, geometric, organic seal, performance, script, pixel-tech, hospitality emblem, corporate, playful, bakery, photography monogram and minimal hotel directions. SVG lettering is outlined; each has primary, mark, dark, light and presentation variants.

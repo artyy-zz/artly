@@ -1,23 +1,15 @@
 "use client";
 import Link from "next/link";
-import {
-  Monitor,
-  PenTool,
-  MessageCircle,
-  Layers,
-  ArrowUpRight,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { c, services, type Copy } from "@/lib/content";
 import { useSite } from "./providers";
 import { Button, Reveal } from "./ui";
 import { ServiceVisual } from "./service-visual";
-import { Arti } from "./arti";
-export const serviceIcons = {
-  Monitor,
-  PenTool,
-  MessageCircle,
-  Layers,
-};
+const capabilities = {
+  websites: c("Strategji · UI/UX · Zhvillim · Responsive", "Strategy · UI/UX · Development · Responsive"),
+  "logo-design": c("Drejtim · Simbol · Tipografi · Sistem", "Direction · Symbol · Typography · System"),
+  "graphic-design": c("Përmbajtje · Menaxhim · Fushata · Print", "Content · Management · Campaigns · Print"),
+} as const;
 export function SectionHeading({
   number,
   kicker,
@@ -56,26 +48,25 @@ export function SectionHeading({
 export function ServiceGrid({ preview = false }: { preview?: boolean }) {
   const { t } = useSite();
   return (
-    <div className={`service-grid ${preview ? "service-preview" : ""}`}>
+    <div className={`service-editorial ${preview ? "service-editorial-preview" : ""}`}>
       {services.map((service, i) => {
-        const Icon = serviceIcons[service.icon];
         return (
-          <Reveal key={service.slug} delay={i * 0.025}>
+          <Reveal key={service.slug} delay={i * 0.035} className={`service-chapter service-chapter-${service.slug}`}>
             <Link
               href={`/services/${service.slug}`}
-              className={`service-card service-${service.slug}`}
+              className="service-chapter-link"
             >
-              <ServiceVisual service={service.slug} />
-              <div className="service-card-top">
-                <Icon size={26} strokeWidth={1.5} />
-                <span>0{services.indexOf(service) + 1}</span>
+              <div className="service-chapter-copy">
+                <span className="service-chapter-number">0{i + 1} / 03</span>
+                <h3>{t(service.title)}</h3>
+                <p>{t(service.description)}</p>
+                <small>{t(capabilities[service.slug])}</small>
+                <span className="service-explore">
+                  {t(c("Eksploro shërbimin", "Explore service"))}
+                  <ArrowUpRight size={18} />
+                </span>
               </div>
-              <h3>{t(service.title)}</h3>
-              <p>{t(service.description)}</p>
-              <span className="service-explore">
-                {t(c("Eksploro shërbimin", "Explore service"))}
-                <ArrowUpRight size={18} />
-              </span>
+              <ServiceVisual service={service.slug} />
             </Link>
           </Reveal>
         );
@@ -156,7 +147,6 @@ export function ContactCTA() {
             {t(c("Diskutojmë projektin", "Let’s discuss your project"))}
           </Button>
         </div>
-        <Arti pose="pointing" size="clamp(175px, 18vw, 245px)" className="cta-arti" interactive />
       </Reveal>
     </section>
   );

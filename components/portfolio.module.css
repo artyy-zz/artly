@@ -18,9 +18,7 @@
 .universe [aria-hidden="true"] {
   pointer-events: none;
 }
-.heroArti,
-.craftArti,
-.techArti {
+.heroArti {
   pointer-events: none;
 }
 .universe em {
@@ -425,13 +423,6 @@
 .craftScene {
   height: 600px;
 }
-.craftArti {
-  position: absolute;
-  width: 340px;
-  left: calc(50% - 170px);
-  top: 110px;
-  transform: translateZ(60px);
-}
 .orbit {
   position: absolute;
   left: 5%;
@@ -535,13 +526,6 @@
 }
 .techScene {
   height: 550px;
-}
-.techArti {
-  width: 330px;
-  position: absolute;
-  top: 95px;
-  left: calc(50% - 165px);
-  transform: translateZ(45px);
 }
 .techRing {
   position: absolute;
@@ -826,14 +810,6 @@
 .phone :global(.mockup img) {
   object-fit: cover;
   object-position: top;
-}
-.projectArti {
-  width: 200px;
-  position: absolute;
-  bottom: 4%;
-  right: 2%;
-  transform: translateZ(40px);
-  pointer-events: none;
 }
 .projectSceneLabel {
   position: absolute;
@@ -1127,10 +1103,6 @@
   background: radial-gradient(ellipse at 50% 100%, #7745a53b, transparent 70%);
   pointer-events: none;
 }
-.finaleArti {
-  width: 270px;
-  transform: rotateZ(-4deg);
-}
 .finale > div:not(.finaleGlow) {
   position: relative;
 }
@@ -1199,11 +1171,6 @@
   .craftScene {
     height: 510px;
   }
-  .craftArti {
-    width: 280px;
-    left: calc(50% - 140px);
-    top: 105px;
-  }
   .discipline {
     width: 115px;
     padding: 16px 10px;
@@ -1214,19 +1181,12 @@
   .techScene {
     height: 470px;
   }
-  .techArti {
-    width: 260px;
-    left: calc(50% - 130px);
-  }
   .techChip {
     width: 73px;
     height: 73px;
   }
   .projectScene {
     height: 540px;
-  }
-  .projectArti {
-    width: 175px;
   }
 }
 @media (max-width: 700px) {
@@ -1382,12 +1342,6 @@
     height: 470px;
     margin-top: 16px;
   }
-  .craftArti {
-    width: 65%;
-    max-width: 290px;
-    left: 17.5%;
-    top: 95px;
-  }
   .discipline {
     width: 105px;
     padding: 15px 8px;
@@ -1431,11 +1385,6 @@
   .techScene {
     width: 100%;
     height: 440px;
-  }
-  .techArti {
-    width: 63%;
-    left: 18.5%;
-    top: 90px;
   }
   .techChip {
     width: 65px;
@@ -1556,11 +1505,6 @@
   .phone :global(.mockup) {
     border-radius: 0 0 8px 8px;
   }
-  .projectArti {
-    width: 95px;
-    bottom: 5%;
-    right: -1%;
-  }
   .projectGhost {
     font-size: 110px;
     top: 5%;
@@ -1674,11 +1618,6 @@
     min-height: 450px;
     padding: 55px 7% 85px;
     gap: 0;
-  }
-  .finaleArti {
-    width: 39%;
-    margin-left: -6%;
-    margin-right: 2%;
   }
   .finale > div:last-of-type {
     width: 65%;

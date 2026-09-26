@@ -17,7 +17,6 @@ import {
   Braces,
   Code2,
   Command,
-  Globe2,
   Layers3,
   MapPin,
   MousePointer2,
@@ -64,32 +63,18 @@ const disciplines = [
     slug: "logo-design",
   },
   {
-    name: c("Dizajn Grafik", "Graphic Design"),
+    name: c("Dizajn grafik & social media", "Graphic design & social media"),
     detail: c(
-      "Ide që marrin formë, në çdo format.",
-      "Ideas taking shape, in every format.",
+      "Përmbajtje, menaxhim dhe dizajn në çdo format.",
+      "Content, management and design in every format.",
     ),
     tags: c(
-      "Social · Postera · Menu · Print",
-      "Social · Posters · Menus · Print",
+      "Social · Menaxhim · Postera · Print",
+      "Social · Management · Posters · Print",
     ),
     icon: Layers3,
     pose: "designing",
     slug: "graphic-design",
-  },
-  {
-    name: c("Menaxhim Social Media", "Social Media Management"),
-    detail: c(
-      "Përmbajtje me drejtim dhe vazhdimësi.",
-      "Content with direction and consistency.",
-    ),
-    tags: c(
-      "Strategji · Përmbajtje · Planifikim",
-      "Strategy · Content · Planning",
-    ),
-    icon: Globe2,
-    pose: "phone",
-    slug: "social-management",
   },
 ] as const;
 const technologies = [
@@ -432,7 +417,7 @@ export function Portfolio() {
               )}
             </p>
             <div className={s.disciplineDetail} aria-live="polite">
-              <span className={s.tiny}>0{discipline + 1} / 04</span>
+              <span className={s.tiny}>0{discipline + 1} / 03</span>
               <h3>{t(service.name)}</h3>
               <p>{t(service.detail)}</p>
               <span className={s.serviceTags}>{t(service.tags)}</span>
@@ -444,13 +429,6 @@ export function Portfolio() {
           </div>
           <Scene className={s.craftScene}>
             <div className={s.orbit} aria-hidden="true" />
-            <div className={s.craftArti}>
-              <Arti
-                pose={service.pose}
-                size="100%"
-                sizes="(max-width: 700px) 58vw, 370px"
-              />
-            </div>
             {disciplines.map((item, index) => (
               <button
                 key={item.slug}
@@ -490,13 +468,6 @@ export function Portfolio() {
                 className={`${s.techRing} ${s.techRingOuter}`}
                 aria-hidden="true"
               />
-              <div className={s.techArti}>
-                <Arti
-                  pose="laptop"
-                  size="100%"
-                  sizes="(max-width: 700px) 55vw, 350px"
-                />
-              </div>
               {technologies.map((item, index) => (
                 <button
                   key={item.name}
@@ -625,19 +596,6 @@ export function Portfolio() {
                 </>
               )}
             </button>
-            <div className={s.projectArti}>
-              <Arti
-                pose={
-                  projectIndex < 2
-                    ? "pointing"
-                    : projectIndex === 6
-                      ? "phone"
-                      : "designing"
-                }
-                size="100%"
-                sizes="(max-width: 700px) 25vw, 250px"
-              />
-            </div>
             <span className={s.projectSceneLabel}>
               ARTLY STUDIO / {t(c("KONCEPT", "CONCEPT"))}
             </span>
@@ -742,13 +700,6 @@ export function Portfolio() {
         </section>
         <section className={s.finale} aria-labelledby="finale-title">
           <div className={s.finaleGlow} aria-hidden="true" />
-          <div className={s.finaleArti}>
-            <Arti
-              pose="wave"
-              size="100%"
-              sizes="(max-width: 700px) 44vw, 300px"
-            />
-          </div>
           <div>
             <span className={s.tiny}>
               {t(c("RADHËN E KA IDEJA JOTE", "YOUR IDEA IS NEXT"))}

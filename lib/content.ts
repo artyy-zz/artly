@@ -4,7 +4,7 @@ export type Copy = { sq: string; en: string };
 export const c = (sq: string, en: string): Copy => ({ sq, en });
 export const projectTag = (tag: string): Copy => ({
   "Graphic design": c("Dizajn grafik", "Graphic design"),
-  Management: c("Menaxhim social media", "Social media management"),
+  Management: c("Social media", "Social media"),
 }[tag] ?? c(tag, tag));
 export const services = [
   {
@@ -32,27 +32,15 @@ export const services = [
     }
   },
   {
-    "slug": "social-management",
-    "icon": "MessageCircle",
-    "title": {
-      "sq": "Menaxhim social media",
-      "en": "Social media management"
-    },
-    "description": {
-      "sq": "Planifikim, publikim dhe kujdes i vazhdueshëm për komunitetin tuaj.",
-      "en": "Planning, publishing and ongoing care for your community."
-    }
-  },
-  {
     "slug": "graphic-design",
     "icon": "Layers",
     "title": {
-      "sq": "Dizajn grafik",
-      "en": "Graphic design"
+      "sq": "Dizajn grafik & social media",
+      "en": "Graphic design & social media"
     },
     "description": {
-      "sq": "Nga postimi te posteri: komunikim vizual i punuar për çdo format.",
-      "en": "From posts to posters: visual communication crafted for every format."
+      "sq": "Përmbajtje, menaxhim dhe dizajn praktik për çdo pikë komunikimi.",
+      "en": "Content, management and practical design for every communication touchpoint."
     }
   }
 ] as const;
@@ -104,9 +92,9 @@ export function conceptProject(b: Concept): Project {
 export const projects: Project[] = concepts
   .filter((b) => b.brand)
   .map(conceptProject);
-// Set verified studio contact destinations before launch. Never invent contact details.
-export const contactDetails: {
-  email: string | null;
-  instagram: string | null;
-  whatsapp: string | null;
-} = { email: null, instagram: null, whatsapp: null };
+export const contactDetails = {
+  phoneDisplay: "+383 49 452 409",
+  phone: "tel:+38349452409",
+  whatsapp: "https://wa.me/38349452409",
+  viber: "viber://chat?number=%2B38349452409",
+} as const;

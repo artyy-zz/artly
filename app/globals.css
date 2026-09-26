@@ -1128,63 +1128,6 @@ svg {
   color: var(--muted);
   margin-top: 25px;
 }
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.service-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 27px 24px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  transition:
-    background 0.3s,
-    transform 0.3s,
-    border-color 0.3s;
-}
-.service-card:hover {
-  background: var(--surface);
-  border-color: #786bb0;
-  transform: translateY(-5px);
-}
-.service-card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 45px;
-}
-.service-card-top svg {
-  color: var(--accent);
-}
-.service-card-top > span {
-  font: 10px var(--font-mono);
-  color: var(--muted);
-}
-.service-card h3 {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -0.4px;
-  line-height: 1.3;
-}
-.service-card p {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.7;
-  margin-top: 12px;
-  margin-bottom: 28px;
-}
-.service-explore {
-  margin-top: auto;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  align-items: center;
-}
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1213,34 +1156,6 @@ svg {
   color: var(--muted);
   margin-top: 13px;
   max-width: 240px;
-}
-.price-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-.price-top h3 {
-  font-size: 18px;
-  letter-spacing: -0.4px;
-  font-weight: 500;
-}
-.price-top > span {
-  font: 8px var(--font-mono);
-  color: var(--accent);
-  border: 1px solid #a193fa40;
-  padding: 6px;
-  border-radius: 4px;
-}
-.price {
-  font-size: 42px;
-  letter-spacing: -2px;
-  margin: 32px 0;
-}
-.price small {
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: 0;
 }
 .cta-section {
   padding-block: 110px;
@@ -1307,9 +1222,6 @@ svg {
 }
 .services-full {
   padding-bottom: 20px;
-}
-.services-full .service-card {
-  min-height: 285px;
 }
 .filter-bar {
   display: flex;
@@ -1878,215 +1790,7 @@ svg {
 .not-found .button {
   margin-top: 30px;
 }
-.form-note {
-  font-size: 11px;
-  color: var(--muted);
-  line-height: 1.8;
-}
-.placeholder-price {
-  font-size: 10px;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  padding-top: 15px;
-  display: block;
-  margin-top: 20px;
-}
-.contact-channels {
-  margin-top: 32px;
-}
-.contact-channels h3 {
-  font-size: 14px;
-  font-weight: 450;
-  margin-bottom: 18px;
-}
-.contact-channels a > svg:last-child {
-  margin-left: auto;
-}
-.selected-service {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--raised);
-  padding: 14px 16px;
-  border-radius: 5px;
-  margin-bottom: 25px;
-  font-size: 14px;
-}
-.selected-service button {
-  font-size: 12px;
-  color: var(--accent);
-}
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0 0 25px;
-  min-width: 0;
-}
-legend {
-  font-size: 13px;
-  margin-bottom: 14px;
-}
-.scope-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-.scope-options label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px;
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  font-size: 12px;
-  cursor: pointer;
-}
-.scope-options label.checked {
-  border-color: var(--accent);
-  background: #a193fa08;
-}
-input[type="radio"],
-input[type="checkbox"] {
-  accent-color: var(--primary);
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-.page-count {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  font-size: 13px;
-}
-.page-count small {
-  display: block;
-  color: var(--muted);
-  font-size: 11px;
-  margin-top: 6px;
-}
-.page-count select {
-  width: 75px;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  padding: 10px 15px;
-}
-.extras {
-  display: grid;
-  gap: 12px;
-}
-.extras label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  cursor: pointer;
-}
-.extras small {
-  margin-left: auto;
-  color: var(--muted);
-  font: 10px var(--font-mono);
-}
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 22px;
-  font-size: 12px;
-}
-.field input,
-.field textarea {
-  width: 100%;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  border-radius: 5px;
-  padding: 13px;
-  color: var(--text);
-  font-size: 16px;
-  resize: vertical;
-  min-width: 0;
-}
-.field textarea::placeholder {
-  color: var(--muted);
-  font-size: 13px;
-}
-.form-fields {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 18px;
-}
-.review dl {
-  margin: 0;
-}
-.review dl > div {
-  display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  padding: 15px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 13px;
-}
-.review dt {
-  color: var(--muted);
-  flex-shrink: 0;
-}
-.review dd {
-  margin: 0;
-  text-align: right;
-  overflow-wrap: anywhere;
-  max-width: 65%;
-}
-.review-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 25px;
-  overflow-wrap: anywhere;
-}
-.review-contact strong {
-  font-size: 17px;
-  font-weight: 500;
-}
-.review-contact span,
-.review-contact p {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.6;
-}
-.review-contact .text-link {
-  margin-top: 12px;
-  color: var(--accent);
-}
-.demo-notice {
-  font-size: 12px;
-  line-height: 1.8;
-  color: var(--muted);
-  background: var(--bg);
-  padding: 18px;
-  border-radius: 5px;
-  margin-top: 24px;
-}
-.complete-icon {
-  display: grid;
-  place-items: center;
-  width: 65px;
-  height: 65px;
-  background: #a193fa15;
-  color: var(--accent);
-  border-radius: 50%;
-}
 @media (max-width: 1100px) {
-  .service-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .service-card-top {
-    margin-bottom: 30px;
-  }
-  .price-top > span {
-    display: none;
-  }
   .cta-inner {
     padding: 45px;
   }
@@ -2140,12 +1844,6 @@ input[type="checkbox"] {
   .process-grid {
     grid-template-columns: 1fr 1fr;
     row-gap: 35px;
-  }
-  .price-top > span {
-    display: block;
-  }
-  .price {
-    margin: 25px 0;
   }
   .cta-inner {
     padding: 35px;
@@ -2226,9 +1924,6 @@ input[type="checkbox"] {
   .detail-actions {
     margin-top: 25px;
   }
-  .contact-channels {
-    margin-top: 0;
-  }
 }
 @media (max-width: 480px) {
   .section {
@@ -2278,28 +1973,6 @@ input[type="checkbox"] {
     opacity: 1;
     transform: none;
     font-size: 10px;
-  }
-  .service-grid {
-    gap: 12px;
-  }
-  .service-card {
-    padding: 20px 17px;
-  }
-  .service-card h3 {
-    font-size: 16px;
-  }
-  .service-card p {
-    font-size: 12px;
-  }
-  .service-explore {
-    font-size: 9px;
-    gap: 5px;
-  }
-  .service-card-top {
-    margin-bottom: 32px;
-  }
-  .service-card-top > svg {
-    width: 23px;
   }
   .process-grid {
     gap: 30px 22px;
@@ -2564,37 +2237,6 @@ input[type="checkbox"] {
   }
   .collection-card .mock-headline {
     font-size: 27px;
-  }
-  .contact-channels {
-    margin-top: 5px;
-  }
-  .scope-options {
-    grid-template-columns: 1fr;
-  }
-  .scope-options label {
-    font-size: 13px;
-  }
-  .page-count {
-    font-size: 12px;
-    gap: 10px;
-  }
-  .page-count small {
-    font-size: 10px;
-    line-height: 1.7;
-    max-width: 170px;
-  }
-  .extras label {
-    font-size: 12px;
-  }
-  .form-fields {
-    grid-template-columns: 1fr;
-  }
-  .field {
-    font-size: 12px;
-  }
-  .review dl > div {
-    font-size: 12px;
-    gap: 15px;
   }
   .review dt {
     flex-shrink: 1;

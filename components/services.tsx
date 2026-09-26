@@ -16,7 +16,6 @@ import { Mockup } from "./mockup";
 import { ProjectDialog } from "./projects";
 import { getCollection, collectionRows } from "@/lib/catalogue";
 import { serviceVisuals } from "./service-visual";
-import { Arti, type ArtiPose } from "./arti";
 export function Services() {
   const { t } = useSite();
   return (
@@ -32,13 +31,13 @@ export function Services() {
           <p>
             {t(
               c(
-                "Nga shenja e parë e brandit te përvoja e plotë digjitale. I lidhim të gjitha.",
-                "From your first brand mark to your complete digital experience. We connect it all.",
+                "Tre drejtime të qarta për një prezencë që funksionon dhe dallohet.",
+                "Three clear directions for a presence that works and stands out.",
               ),
             )}
           </p>
         </Reveal>
-        <Arti pose="idle" size="clamp(180px, 20vw, 270px)" className="services-intro-arti" interactive />
+        <span className="services-intro-count" aria-hidden="true">03</span>
       </section>
       <section className="container services-full">
         <ServiceGrid />
@@ -50,12 +49,16 @@ export function Services() {
 function CollectionRow({
   service,
   category,
+  description,
+  anchor,
   rowIndex,
   variant,
   onOpen,
 }: {
   service: ServiceSlug;
   category: Copy;
+  description?: Copy;
+  anchor?: string;
   rowIndex: number;
   variant: string;
   onOpen: (p: Project) => void;
@@ -80,15 +83,18 @@ function CollectionRow({
     };
   }, []);
   return (
-    <section className="collection-row">
+    <section className="collection-row" id={anchor}>
       <div className="collection-heading">
-        <h2>
-          {t(category)}
-          <span>
-            {getCollection(service, rowIndex).length}{" "}
-            {t(c("koncepte", "concepts"))}
-          </span>
-        </h2>
+        <div>
+          <h2>
+            {t(category)}
+            <span>
+              {getCollection(service, rowIndex).length}{" "}
+              {t(c("koncepte", "concepts"))}
+            </span>
+          </h2>
+          {description && <p className="collection-description">{t(description)}</p>}
+        </div>
         <div>
           <button
             className="icon-button"
@@ -162,9 +168,8 @@ export function ServiceDetail({ slug }: { slug: ServiceSlug }) {
   const { t } = useSite();
   const service = services.find((s) => s.slug === slug)!;
   const [selected, setSelected] = useState<Project | null>(null);
-  const cats = collectionRows[slug].map(row => row.title);
-  const variant = slug === "websites" ? "website" : slug === "logo-design" ? "logo" : slug === "social-management" ? "campaign" : "social";
-  const artiPose: ArtiPose = slug === "websites" ? "laptop" : slug === "social-management" ? "phone" : "designing";
+  const rows = collectionRows[slug];
+  const variant = slug === "websites" ? "website" : slug === "logo-design" ? "logo" : "social";
   return (
     <>
       <section className="service-detail-intro container">
@@ -197,7 +202,6 @@ export function ServiceDetail({ slug }: { slug: ServiceSlug }) {
           <span>
             {t(c("Imagjino mundësitë.", "Imagine the possibilities."))}
           </span>
-          <Arti pose={artiPose} size="clamp(145px, 17vw, 225px)" className="service-arti" interactive />
         </div>
       </section>
       <div className="collection-disclaimer container">
@@ -210,11 +214,13 @@ export function ServiceDetail({ slug }: { slug: ServiceSlug }) {
         )}
       </div>
       <div className="collections container">
-        {cats.map((category, i) => (
+        {rows.map((row, i) => (
           <CollectionRow
             service={slug}
-            key={category.en}
-            category={category}
+            key={row.title.en}
+            category={row.title}
+            description={row.description}
+            anchor={row.id}
             rowIndex={i}
             variant={variant}
             onOpen={setSelected}
